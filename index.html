@@ -3,49 +3,51 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8"> <!-- character set-->
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- controls how website is displayed in different devices -->
+	<meta charset="utf-8">
+	<!-- character set-->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- controls how website is displayed in different devices -->
 
-  <title>Wilson's Website</title> <!-- Website title -->
-  <meta name="description" content="My website">
-  <meta name="author" content="Wilson">
-  <link rel="stylesheet" href="./assets/css/style.css">
+	<title>Wilson's Website</title> <!-- Website title -->
+	<meta name="description" content="My website">
+	<meta name="author" content="Wilson">
+	<link rel="stylesheet" href="./assets/css/style.css">
 </head>
 
 <body>
-    <!-- Navagation Bar -->
-    <header>
-        <nav class="navbar">
-          <a href="#" class="nav-branding">WS.</a>
-          <ul class="nav-menu">
-            <li class="nav-item">
-              <a href="index.html" class="nav-link">Home</a>
-            </li>
-            <li class="nav-item">
-              <a href="about.html" class="nav-link">About</a>
-            </li>
-            <li class="nav-item">
-              <a href="resume.html" class="nav-link">Resume</a>
-            </li>
-            <li class="nav-item">
-                <a href="skills.html" class="nav-link">Skills/Expirence</a>
-              </li>
-            <li class="nav-item">
-                <a href="projects.html" class="nav-link">Projects ▼</a>
-                <ul>
-                    <li class="nav-item"><a href="#" class="nav-link">Course Hero Bot </a></li>
-                    <li class="nav-item"><a href="#" class="nav-link">Mock Vending Machine </a></li>
-                    <li class="nav-item"><a href="#" class="nav-link">Singify </a></li>
-                    <li class="nav-item"><a href="#" class="nav-link">Personal Website</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link">Cal Poly Racing Club</a></li>
-                  </ul></li>
-            <li class="nav-item">
-              <a href="#" class="nav-link">Contact</a>
-            </li>
-          </ul>
-          <div class="hamburger">
-            <span class="bar"></span>
+	<!-- Navagation Bar -->
+	<header>
+		<nav class="navbar">
+			<a href="./index.html" class="nav-branding">WS.</a>
+			<ul class="nav-menu">
+				<li class="nav-item">
+					<a href="./index.html" class="nav-link">Home</a>
+				</li>
+				<li class="nav-item">
+					<a href="./about.html" class="nav-link">About</a>
+				</li>
+				<li class="nav-item">
+					<a href="./resume.html" class="nav-link">Resume</a>
+				</li>
+				<li class="nav-item">
+					<a href="./skills.html" class="nav-link">Skills/Expirence</a>
+				</li>
+				<li class="nav-item">
+					<a href="./projects.html" class="nav-link">Projects ▼</a>
+					<ul>
+						<li class="nav-item"><a href="./projects/ch.html" class="nav-link">Course Hero Bot </a></li>
+						<li class="nav-item"><a href="./projects/vm.html" class="nav-link">Mock Vending Machine </a></li>
+						<li class="nav-item"><a href="./projects/sing.html" class="nav-link">Singify </a></li>
+						<li class="nav-item"><a href="./projects/web.html" class="nav-link">Personal Website</a></li>
+						<li class="nav-item"><a href="./projects/" class="nav-link">Cal Poly Racing Club</a></li>
+					</ul>
+				</li>
+				<li class="nav-item">
+					<a href="#" class="nav-link">Contact</a>
+				</li>
+			</ul>
+			<div class="hamburger">
+				<span class="bar"></span>
             <span class="bar"></span>
             <span class="bar"></span>
           </div>
@@ -53,12 +55,17 @@
     </header>
 
     <!-- titles -->
-    <div>
+    <div class="front_page">
     <h1 >Wilson Szeto</h1>
     <h2 >Electronics Engineer</h2>
+    <h3 >This site is still in development and will be completed by the end of this year! </h3>
     </div>
+    
     <span>
-      <p></br></br></br></br>This site is under construction ⚙️ Will be complete by the end of the year!
+    <div><img class="pic_me" src="./assets/images/pic_me.png" alt="A picture of me."/></div>
+    <div class="index_middle"><h1 padding-top="1em" font-size="75px">About Me</h1></div>
+    <hr class="hr"/>
+    <div class="index_middle"><p>Hello, my name is Wilson Szeto and i'm a electrical engineering major at Cal Poly San Luis Obispo! I have a professional intrest in software development, circuit board design, and embedded systems. </p></div>
     </span>
     <script src="./assets/js/scripts.js"></script>
 </body>
