@@ -24,7 +24,7 @@
 					<a href="./index.html" class="nav-link">Home</a>
 				</li>
 				<li class="nav-item">
-					<a href="./about.html" class="nav-link">About</a>
+					<a href="#about" class="nav-link">About</a>
 				</li>
 				<li class="nav-item">
 					<a href="./resume.html" class="nav-link">Resume</a>
@@ -43,7 +43,7 @@
 					</ul>
 				</li>
 				<li class="nav-item">
-					<a href="#" class="nav-link">Contact</a>
+					<a href="./contact.html" class="nav-link">Contact</a>
 				</li>
 			</ul>
 			<div class="hamburger">
@@ -57,16 +57,29 @@
     <!-- titles -->
     <div class="front_page">
     <h1 >Wilson Szeto</h1>
-    <h2 >Electronics Engineer</h2>
+    <h2 >Electrical Engineer</h2>
     <h3 >This site is still in development and will be completed by the end of this year! </h3>
     </div>
     
-    <span>
-    <div><img class="pic_me" src="./assets/images/pic_me.png" alt="A picture of me."/></div>
-    <div class="index_middle"><h1 padding-top="1em" font-size="75px">About Me</h1></div>
-    <hr class="hr"/>
-    <div class="index_middle"><p>Hello, my name is Wilson Szeto and i'm a electrical engineering major at Cal Poly San Luis Obispo! I have a professional intrest in software development, circuit board design, and embedded systems. </p></div>
-    </span>
+    <div class="aboutme" id="about">
+        <article>
+          <h1 style="padding-top: 0.5em; font-size:60px;">About Me</h1>
+          <hr class="hr"/>
+          <img class="pic_me" src="./assets/images/pic_me.png" alt="A picture of me."/>
+          <blockquote>
+            Hello, my name is Wilson Szeto and i'm a electrical engineering major at Cal Poly San Luis Obispo! I have a professional intrest in software development, circuit board design, and embedded systems.
+          </blockquote>
+        </article>
+    </div>
+
+    <div class="resume">
+      <h1 style="padding-top: 15rem;">Resume</h1>
+      <!--<div style="position: relative; top: 50%; transform: translateY(-50%); text-align:center;"><button style="font-size: 40px; padding:10 px; border-radius: 1-px; margin: 20px">Download Here</button></div>-->
+      <button onclick="document.location='./resume.html'">Preview Resume</button>
+      <button href="#">Download Here</button>
+      
+      
+    </div>
     <script src="./assets/js/scripts.js"></script>
 </body>
 </html>

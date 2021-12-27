@@ -11,45 +11,91 @@
 	<title>Wilson's Website</title> <!-- Website title -->
 	<meta name="description" content="My website">
 	<meta name="author" content="Wilson">
-	<link rel="stylesheet" href="./assets/css/style.css">
+	<link rel="stylesheet" href="../assets/css/style.css">
 </head>
 
 <body>
 	<!-- Navagation Bar -->
 	<header>
 		<nav class="navbar">
-			<a href="./index.html" class="nav-branding">WS.</a>
+			<a href="../index.html" class="nav-branding">WS.</a>
 			<ul class="nav-menu">
 				<li class="nav-item">
-					<a href="./index.html" class="nav-link">Home</a>
+					<a href="../index.html" class="nav-link">Home</a>
 				</li>
 				<li class="nav-item">
-					<a href="./about.html" class="nav-link">About</a>
+					<a href="../about.html" class="nav-link">About</a>
 				</li>
 				<li class="nav-item">
-					<a href="./resume.html" class="nav-link">Resume</a>
+					<a href="../resume.html" class="nav-link">Resume</a>
 				</li>
 				<li class="nav-item">
-					<a href="./skills.html" class="nav-link">Skills/Expirence</a>
+					<a href="../skills.html" class="nav-link">Skills/Expirence</a>
 				</li>
 				<li class="nav-item">
-					<a href="./projects.html" class="nav-link">Projects ▼</a>
+					<a href="../projects.html" class="nav-link">Projects ▼</a>
 					<ul>
-						<li class="nav-item"><a href="./projects/ch.html" class="nav-link">Course Hero Bot </a></li>
-						<li class="nav-item"><a href="./projects/vm.html" class="nav-link">Mock Vending Machine </a></li>
-						<li class="nav-item"><a href="./projects/sing.html" class="nav-link">Singify </a></li>
-						<li class="nav-item"><a href="./projects/web.html" class="nav-link">Personal Website</a></li>
-						<li class="nav-item"><a href="./projects/" class="nav-link">Cal Poly Racing Club</a></li>
+						<li class="nav-item"><a href="./ch.html" class="nav-link">Course Hero Bot </a></li>
+						<li class="nav-item"><a href="./vm.html" class="nav-link">Mock Vending Machine </a></li>
+						<li class="nav-item"><a href="./sing.html" class="nav-link">Singify </a></li>
+						<li class="nav-item"><a href="./web.html" class="nav-link">Personal Website</a></li>
+						<li class="nav-item"><a href="./cprc.html" class="nav-link">Cal Poly Racing Club</a></li>
 					</ul>
 				</li>
 				<li class="nav-item">
-					<a href="#" class="nav-link">Contact</a>
+					<a href="../contact.html" class="nav-link">Contact</a>
 				</li>
 			</ul>
 			<div class="hamburger">
 				<span class="bar"></span>
             <span class="bar"></span>
             <span class="bar"></span>
-          </div>
-        </nav>
-    </header>
+      </div>
+      </nav>
+  </header>
+
+    <div class="ch">
+      <h1 style="position: absolute; bottom: 70px; text-align: center; width: 100%;">Course Hero Bot</h1>
+    </div>
+    <div class="ch-middle">
+      <h2>Summary</h2>
+      <p>CH Bot is a discord bot that has been in over +500 discord servers and has helped over +10000 students around the world access millions of study resources on Course Hero. Built with Python, CH Bot allows for a simple, yet effective way for user to generate unlocks free of charge.</p>
+      <h2>Bot Explanation</h2>
+      <p>In order to unlock study documents on Course Hero, you need unlocks. Course Hero allows users to upload study documents on their website for unlocks; for every 10 documents you upload, you will recieve 5 unlocks. What CH bot does is it generates the amount of documents you want and you upload them to Course Hero for free unlocks!</p>
+      <h2>Fun Facts</h2>
+      <ul class="ch-list">
+        <li style="padding-top: 1em;">100% developed by me</li>
+        <li >Technologies Used:</li>
+          <ul class="ch-list2">
+            <li >Python</li>
+            <li >Discord API</li>
+            <li >DeepAI API</li>
+            <li >replit(for hosting)</li>
+            <li >Github</li>
+          </ul>
+        </li>
+        <li>+3 million documents generated! ➜ 3m/10 = 300k unlocks recieved!</li>
+      </ul>
+      <h2>How to Use</h2>
+      <h3 style="padding-top: 1em;">WARNING: Do not upload more than 40 documents per day, it will get auto rejected</h3>
+      <ol class="ch-ol">
+        <li>Do !f 20 in the #ch-bot channel in discord and download the zip file</li>
+        <li>Go to <a href="https://www.coursehero.com/upload" style="text-decoration: underline;">https://www.coursehero.com/upload</a></li>
+        <li>Make a account if you didn't already</li>
+        <li>Extract/open the .zip file and upload the documents</li>
+        <li>Select random class for the documents</li>
+        <li>Wait for documents to approve!</li>
+      </ol>
+      <h2 style="padding-bottom: 1em;">Tutorial Video</h2>
+      <div>
+      <div class="video-container">
+      <iframe src="https://www.youtube.com/embed/0Nf_HmQ5zVM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      </div>
+      <h2>Deeper Explination</h2>
+      <p></p>
+    </div>
+
+    <script src="./assets/js/scripts.js"></script>
+  </body>
+</html>

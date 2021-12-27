@@ -1,5 +1,6 @@
 /*imports*/
 @import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200&display=swap');
 
 /*general*/
 * {
@@ -9,8 +10,9 @@
 }
 
 h1 {
-	font-size: 75px;
+	font-size: 65px;
   color: white;
+  
 }
 
 h2 {
@@ -120,35 +122,42 @@ a {
 
 /*index*/
 .front_page {
-	background: url('../images/electric.gif');
-	-webkit-bacground-size: cover;
+	background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url('../images/electric.gif');
+  background-attachment:fixed; /*parallax effect*/
 	background-size: cover;
 	background-position: center center;
 	background-repeat: no-repeat;
-	height: 110vh;
+	height: 100vh;
   position: static;
 	text-align: center;
   font-family: 'Architects Daughter', cursive;
-  font-style: italic;
   width: 100%;
-  padding-top: 20%;
-}
-
-.pic_me {
-	width: 400px;
-	padding-top: 2em;
-  padding-left: 3em;
-  padding-right: 5em;
-  padding-bottom: 0em;
-  float: left;
-}
-
-.index_middle {
-  padding: 1em;
-  color: white;
-  font-family: "Montserrat", sans-serif;
+  padding-top: 18%;
   
 }
+
+
+
+
+.aboutme {
+  background: url('../images/space.jpg');
+  background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+	height: 115vh;
+  position: static;
+  width: 100%;
+  color: white;
+  padding: 1em;
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+  box-sizing: border-box;
+  line-height: 1.5;
+  letter-spacing: 1px;
+  padding-left: 15%;
+  padding-right: 15%;
+}
+
 .hr {
   color: white;
   height: 5px;
@@ -156,22 +165,143 @@ a {
   border: none;
   border-radius: 50px;
   width: 30em;
+  margin: auto;
+  
+}
+
+
+.pic_me {
+  width: 400px;
+  padding-top: 2em;
+  padding-left: 3em;
+  padding-right: 3em;
+  padding-bottom: 2em;
+}
+
+
+.resume {
+background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.1)), url('../images/grass.gif');
+text-align: center;
+font-size: 4 rem;
+background-size: cover;
+height: 100vh;
+}
+
+.resume button {
+  font-size: 1em;
+  border: 0;
+  color: white;
+  padding: .5rem 2rem;
+  cursor: pointer;
+  border-radius: 25px;
+  position: relative;   
+  text-align: center;
+  background-color: #647C90;
+  transition: all .3s ease;
+}
+
+.resume button:hover {
+  background-color: #34495a
+  
+}
+
+/*Projects*/
+
+/*Course Hero*/
+.ch {
+  background: url('../images/ch.png');
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+	height: 100vh;
+  background-color: #001a96;
+}
+
+.ch-list li{
+  list-style: disc;
+  margin-left: 1em;
+  color: pink;
+}
+
+.ch-list2 li{
+  list-style: disc;
+  margin-left: 4em;
+}
+
+.ch-ol li {
+  list-style: numeric;
+  padding-top: 0.3em;
+  margin-left: 1em;
+  color: pink;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+.ch-middle {
+  background-color: #001a96;
+  padding-left: 20%;
+  padding-right: 20%;
+  display: inline-block; 
+  text-align: left;
+  font-family: 'Ubuntu', sans-serif;
+}
+.ch-middle h2 {
+  text-decoration: underline;
+  padding-top: 1em;
+}
+
+.ch-middle p{
+  padding-top: 1em;
+  color:  pink;
+}
+
+.video-container {
+    overflow: hidden;
+    position: relative;
+    width:100%;
+}
+
+.video-container::after {
+    padding-top: 56.25%;
+    display: block;
+    content: '';
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/*Vending Machine*/
+.vm {
+  background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.8)), url('../images/bsb3.jpg');
+  background-attachment:fixed; /*parallax effect*/
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+	height: 110vh;
 }
 
 
 /* mobile version */
 @media(max-width:768px) {
   .hr {
-  width: 0em;
+  width: 15em;
+  margin: auto;
   }
   
   .pic_me {
-	width: 400px;
-  padding-left: 5em;
-  padding-right: 5em;
-
+    width: 100%;
+	  padding-left: 10%;
+    padding-right: 10%;
+    vertical-align: middle;
   }
-
+  .index_middle {
+  padding: 1em;
+  text-align: center;
+  }
 	.hamburger {
 		display: block;
 	}
