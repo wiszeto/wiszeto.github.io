@@ -9,6 +9,10 @@
 	box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 h1 {
 	font-size: 65px;
   color: white;
@@ -30,6 +34,7 @@ body {
 	font-family: "Montserrat", sans-serif;
 	background-color: black;
 }
+
 
 /*nav bar*/
 li {
@@ -136,7 +141,9 @@ a {
   
 }
 
-
+.front_page h1 {
+  line-height: 80%;
+}
 
 
 .aboutme {
@@ -177,6 +184,7 @@ a {
   padding-right: 3em;
   padding-bottom: 2em;
 }
+
 
 
 .resume {
@@ -284,6 +292,14 @@ height: 100vh;
 	height: 110vh;
 }
 
+/*Singify*/
+.singify {
+  width: 100%;
+  padding-left: 20%;
+  padding-right: 20%;
+}
+
+
 
 /* mobile version */
 @media(max-width:768px) {
@@ -298,9 +314,8 @@ height: 100vh;
     padding-right: 10%;
     vertical-align: middle;
   }
-  .index_middle {
-  padding: 1em;
-  text-align: center;
+  .aboutme {
+    height: 150vh;
   }
 	.hamburger {
 		display: block;
