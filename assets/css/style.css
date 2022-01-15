@@ -226,7 +226,7 @@ z-index: -2;
   padding: .5rem 2rem;
   cursor: pointer;
   border-radius: 25px;
-  position: absolute;   
+  position: inherit;   
   text-align: center;
   background-color: #647C90;
   transition: all .3s ease;
