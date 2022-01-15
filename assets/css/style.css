@@ -96,6 +96,7 @@ a {
 	top: auto;
 	left: auto;
 	background: #34495a;
+  
 }
 
 .navbar ul li:hover>ul {
@@ -145,6 +146,28 @@ a {
   line-height: 80%;
 }
 
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
 
 .aboutme {
   background: url('../images/space.jpg');
@@ -190,9 +213,10 @@ a {
 .resume {
 background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.1)), url('../images/grass.gif');
 text-align: center;
-font-size: 4 rem;
+font-size: 5 rem;
 background-size: cover;
 height: 100vh;
+z-index: -2;
 }
 
 .resume button {
@@ -202,10 +226,11 @@ height: 100vh;
   padding: .5rem 2rem;
   cursor: pointer;
   border-radius: 25px;
-  position: relative;   
+  position: absolute;   
   text-align: center;
   background-color: #647C90;
   transition: all .3s ease;
+  z-index: 0;
 }
 
 .resume button:hover {
@@ -293,10 +318,16 @@ height: 100vh;
 }
 
 /*Singify*/
-.singify {
+.singify{
   width: 100%;
   padding-left: 20%;
   padding-right: 20%;
+}
+
+.singify img{
+  display: block;
+  width: 100%;
+  padding-top: 5em;
 }
 
 
@@ -319,6 +350,7 @@ height: 100vh;
   }
 	.hamburger {
 		display: block;
+    z-index: 20;
 	}
 	.hamburger.active .bar:nth-child(2) {
 		opacity: 0;
@@ -347,4 +379,7 @@ height: 100vh;
 	.nav-menu.active {
 		left: 0;
 	}
+  .resume button {
+    z-index: 0;
+  }
 }
