@@ -1,0 +1,39 @@
+.flex-project-container{
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+.flex-project-container>div{
+    background-color: #212529;
+    width: 200px;
+    height: 200px;
+    margin: 10px;
+    text-align: center;
+    line-height: 75px;
+    font-size: 30px;
+    border-style: hidden;
+    border-radius: 30px;
+}
+
+.flex-project-container img{
+    margin-top: 27px;
+}
+.flex-project-container h3{
+    color: white;
+    margin-top: 0px;
+
+}
+.flex-project-container > div:hover
+{
+transform: scale(1.05);
+background-color: #43464b;
+
+
+}
+
+.image {
+    width: 80px;
+    height: 80px;
+}

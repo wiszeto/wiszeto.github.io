@@ -1,0 +1,22 @@
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(12rem, 21rem));
+  gap: 4rem;
+  justify-content: center;
+  padding-left: 7%;
+  padding-right: 7%;
+}
+.sectiontitle {
+  text-align: center;
+  font-size: 60px;
+  margin: 0;
+  color: white;
+  padding-top: 15px;
+}
+
+@media screen and (max-width: 1360px) {
+  .wrapper {
+
+  }
+}
+

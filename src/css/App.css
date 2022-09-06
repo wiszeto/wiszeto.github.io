@@ -1,0 +1,29 @@
+.App {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'PT Sans';
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+#page {
+  background-color: #101010;
+  background-image: url(../images/pattern.png);
+	background-position: center center;
+
+}
+
+#skillspace {
+  padding: 30px;
+}
+#experiencespace {
+  padding: 30px;
+}
+
+#section {
+
+  padding-bottom: 7%; 
+}

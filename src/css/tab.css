@@ -1,0 +1,96 @@
+.sectiontitle {
+    padding-bottom: 3%;
+}
+
+.containertab {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 80%;
+    margin: auto;
+    word-break: break-all;
+    border-bottom: 4px solid #E02844;
+    border-left: 4px solid #E02844;
+    border-right: 4px solid #E02844;
+    border-radius: 2rem 2rem 1.8rem 1.8rem;
+  }
+  
+  .bloc-tabs {
+    display: flex;
+  }
+
+  .tabs {
+    padding: 15px;
+    text-align: center;
+    width: 50%;
+    background: #E02844;
+    cursor: pointer;
+    box-sizing: border-box;
+    position: relative;
+    border-bottom: 5px solid white;
+    z-index: 51;
+  }
+
+  @media screen and (max-width: 960px) {
+    .tabs {
+      font-size: 14px;
+    }
+  }
+  .active-tabs  {
+    background: grey;
+    border-bottom: 0px solid transparent;
+    border-top: 5px solid white;
+    border-left: 5px solid white;
+    border-right: 5px solid white;
+    box-shadow: 0px -8px 0px 4px #E02844;
+    z-index: 50;
+    
+  }
+  
+  .active-tabs::before {
+
+    display: block;
+    position: absolute;
+    top: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(100% + 2px);
+    height: 5px;
+    
+  }
+  
+  
+  
+  button {
+    border: none;
+    font-size: 25px;
+    color: white;
+    border-radius: 30px 30px 0px 0px ;
+
+  }
+  #out {
+    border-bottom: 5px solid white;
+    border-left: 5px solid white;
+    border-right: 5px solid white;
+    border-radius: 0px 0px 1.5rem 1.5rem;
+  }
+
+  .content-tabs {
+    flex-grow : 1;
+    padding-left: 5%;
+    padding-right: 5%;
+    background-color: grey;
+    background-position: center center;
+    border-radius: 0px 0px 1.3rem 1.3rem;
+  }
+  .content {
+    display: none;
+
+  }
+
+  .active-content {
+    display: block;
+    justify-content: center;
+    padding-top: 3%;
+    padding-bottom: 3%;
+  }

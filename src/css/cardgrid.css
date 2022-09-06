@@ -1,0 +1,70 @@
+* {
+  font-family: 'PT Sans';
+}
+.card {
+  overflow: hidden;
+  border-radius: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 300ms ease-in;
+  background-color: #212529;
+  width: 100%;
+  margin-top: 6vh;
+}
+
+.card__image {
+  margin: 20px 20px 0px 20px;
+  height: 12rem;
+  width: 88%;
+  object-fit: cover;
+  border-radius: 1.5rem;
+}
+
+.card__title {
+  margin: 10px;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.card__description {
+  margin: 5px;
+  padding: 0 1rem;
+  color: white;
+}
+
+.card__skills {
+  margin: 5px;
+  padding: 0 1rem;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+#button__div {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.card__btn {
+  padding: 0.7rem 1.6rem;
+  font-weight: bold;
+  font-size: 1rem;
+  margin: 1.1rem;
+  border: 2px solid #E02844;
+  background: #E02844;
+  color: white;
+  border-radius: 13px;
+  transition: background 200ms ease-in, color 200ms ease-in;
+  cursor: pointer;
+}
+
+.card:hover {
+  box-shadow: 0 2px 20px grey;
+}
+
+.card__btn:hover {
+  background: transparent;
+  border: 2px solid white;
+  transform: scale(1.05);
+}
+

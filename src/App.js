@@ -1,24 +1,41 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import './css/App.css';
+import { BrowserRouter as Router} from 'react-router-dom';
+
+import Navbar from './components/Navbar';
+import ProjectGrid from './components/ProjectGrid.js';
+import Skills from './components/Skills';
+import FrontPage from './components/FrontPage';
+import Tabs from './components/Tab';
+import Experience from './components/Experience';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+        <Router>
+
+        <Navbar />
+
+        <FrontPage />
+
+        <div id='page'>
+          <div id='section'>
+            <ProjectGrid />
+          </div>
+
+          <div id='skillspace'></div>
+
+          <div id='section'>
+            <Tabs />
+          </div>
+
+          <div id='experiencespace'></div>
+
+          <div id='section'>
+            <Experience />
+          </div>
+
+        </div>
+        </Router>
   );
 }
 
