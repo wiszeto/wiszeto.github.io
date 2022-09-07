@@ -11,7 +11,7 @@ function FrontPage() {
         <div id='frontpage'>
             <div id = 'fronttext'>
                 <h1 >Wilson Szeto</h1>
-                <h2>Electrical Engineer <i class="fa-sharp fa-solid fa-code-commit"></i> Software Dev</h2>
+                <h2>Electrical Engineer <i class="fa-solid fa-wave-square"></i> Software Dev</h2>
             
                 <div id="icons">
                     <a id="icon" target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/wilson-szeto-3a4b591aa/" >
