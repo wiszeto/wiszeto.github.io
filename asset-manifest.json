@@ -1,0 +1,40 @@
+{
+  "files": {
+    "main.css": "/static/css/main.46816ea7.css",
+    "main.js": "/static/js/main.4e6e9ce0.js",
+    "static/media/electric.gif": "/static/media/electric.43bdd075f731495e7688.gif",
+    "static/media/portfolio.png": "/static/media/portfolio.57317f3514cb01161a0d.png",
+    "static/media/altiumimg.jpg": "/static/media/altiumimg.655eb25da7babef8d9b8.jpg",
+    "static/media/arduinologo.png": "/static/media/arduinologo.51319eb1c9d57bd3dd28.png",
+    "static/media/pattern.png": "/static/media/pattern.a54fde71eee623175c8d.png",
+    "static/media/pythonimg.png": "/static/media/pythonimg.ecfb4e6faf26def45e95.png",
+    "static/media/matlablogo.png": "/static/media/matlablogo.2b608e94f8e1c2c9cd8e.png",
+    "static/media/csslogo.png": "/static/media/csslogo.7d039f840c0c251dd48a.png",
+    "static/media/raspberrypilogo.png": "/static/media/raspberrypilogo.bd332561b83bcd50a0f7.png",
+    "static/media/msofficelogo.png": "/static/media/msofficelogo.5bb50e40b9bb5425b7ca.png",
+    "static/media/chbot.png": "/static/media/chbot.d1c2a63b3ec1adb64c2e.png",
+    "static/media/rasppi.jpg": "/static/media/rasppi.f93536bf09d8817d2b74.jpg",
+    "static/media/html5logo.jpg": "/static/media/html5logo.0d7034b0984ed2d7ca50.jpg",
+    "static/media/dockerlogo.jpg": "/static/media/dockerlogo.a5441aa867acc6a25934.jpg",
+    "static/media/seleniumlogo.png": "/static/media/seleniumlogo.5b027499285764bf2b1c.png",
+    "static/media/altiumlogo.png": "/static/media/altiumlogo.e4d915db84978f37ee17.png",
+    "static/media/scrumlogo.png": "/static/media/scrumlogo.4f8794c2051c8116e2d0.png",
+    "static/media/singify.png": "/static/media/singify.ec8cb777224d0f4f4e56.png",
+    "static/media/discord.png": "/static/media/discord.ef8d9c88e020507818c2.png",
+    "static/media/github.png": "/static/media/github.05f6c17b8cd04c28456f.png",
+    "static/media/awslogo.png": "/static/media/awslogo.6d32416645b7e59dd14b.png",
+    "static/media/linkedin.png": "/static/media/linkedin.f249b38224ca41a0b909.png",
+    "static/media/ltspicelogo.png": "/static/media/ltspicelogo.fb93e8368fb9f504d783.png",
+    "static/media/javascriptlogo.png": "/static/media/javascriptlogo.266bd9fb2663dcc057b4.png",
+    "static/media/reactlogo.svg": "/static/media/reactlogo.add74742e9e8f8827f7fa666dca760db.svg",
+    "static/media/nodelogo.svg": "/static/media/nodelogo.829c557e87571a03ac6b4713a42d6013.svg",
+    "static/media/lualogo.svg": "/static/media/lualogo.94b96a6c7f17217f9d35bdc8d65908c8.svg",
+    "index.html": "/index.html",
+    "main.46816ea7.css.map": "/static/css/main.46816ea7.css.map",
+    "main.4e6e9ce0.js.map": "/static/js/main.4e6e9ce0.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.46816ea7.css",
+    "static/js/main.4e6e9ce0.js"
+  ]
+}
