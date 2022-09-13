@@ -1,0 +1,35 @@
+.experience-container {
+    margin: 0% 10%;
+    border: 5px solid white;
+    border-radius: 1.6rem;
+    background-color: grey;
+}
+
+.ex-ul{
+    list-style-type:none;
+    padding:0;
+    margin:0;
+}
+.ex-section{
+    padding:0px 10px;
+    border-bottom:2px dotted #ddd;
+    color: white;
+    font-size: 25px;
+    line-height: 0px;
+    padding-bottom: 30px;
+}
+.ex-points {
+    line-height: normal;
+    list-style-type: disc;
+}
+.ex-ul li:last-child{
+    border-bottom:none
+}
+
+@media screen and (max-width: 960px) {
+    .ex-ul li{
+        font-size: 15px;
+
+    }
+}
+

@@ -16,14 +16,28 @@ html {
 
 }
 
-#skillspace {
+#projectsection {
   padding: 30px;
 }
-#experiencespace {
+#skillsection {
+  padding: 30px;
+}
+#experiencesection {
   padding: 30px;
 }
 
-#section {
+#aboutsection {
+  padding: 30px;
+}
 
-  padding-bottom: 7%; 
+#smallpage {
+  display: none;
+}
+@media screen and (max-width: 390px) {
+  #page{
+  display: none;
+  }
+  #smallpage {
+    display: contents;
+  }
 }

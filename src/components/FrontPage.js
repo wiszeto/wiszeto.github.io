@@ -28,7 +28,6 @@ function FrontPage() {
                     </a>
                 </div>
             </div>
-            <p id='scrolldown'>scroll down</p>
         </div>
     );
 }

@@ -8,30 +8,42 @@ import Skills from './components/Skills';
 import FrontPage from './components/FrontPage';
 import Tabs from './components/Tab';
 import Experience from './components/Experience';
+import ImageSlider from './components/ImageSlider';
+import { SliderData } from './components/SliderData';
 
 function App() {
   return (
         <Router>
 
-        <Navbar />
-
-        <FrontPage />
+        <p id='smallpage'>page width is too small</p>
 
         <div id='page'>
+
+          <Navbar />
+          <FrontPage />
+
+          <div id='projectsection'></div>
+
           <div id='section'>
             <ProjectGrid />
           </div>
 
-          <div id='skillspace'></div>
+          <div id='skillsection'></div>
 
           <div id='section'>
             <Tabs />
           </div>
 
-          <div id='experiencespace'></div>
+          <div id='experiencesection'></div>
 
           <div id='section'>
             <Experience />
+          </div>
+
+          <div id='aboutsection'></div>
+
+          <div id='section'>
+
           </div>
 
         </div>

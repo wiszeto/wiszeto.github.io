@@ -30,7 +30,7 @@ function Navbar() {
         <>
             <nav className='navbar'>
                 <Link to='/' className='navbar-logo'>
-                <i class="fa-brands fa-weebly"></i>
+                <i class="fa-sharp fa-solid fa-fire">WS</i>
                 </Link>
                 <div className='menu-icon' onClick={handleClick}>
                     <i className={click ? 'fas fa-times' : 'fas fa-bars'} />
@@ -40,29 +40,38 @@ function Navbar() {
                     <li className='nav-item'>
                     <a href='#frontpage' className='nav-links' onClick={closeMobileMenu}>
                             Home
-                        </a>
+                    </a>
                     </li>
 
                     <li className='nav-item'
                         onMouseEnter={onMouseEnter}
                         onMouseLeave={onMouseLeave}
                     >
-                        <Link to='/projects' className='nav-links' onClick={closeMobileMenu}>
+                        <a href='#projectsection' className='nav-links' onClick={closeMobileMenu}>
                             Projects <i className='fas fa-caret-down' />
-                        </Link>
+                        </a>
                         {dropdown && <Dropdown />}
                     </li>
                     <li className='nav-item'>
-                        <a href='#skillspace' className='nav-links' onClick={closeMobileMenu}>
+                        <a href='#skillsection' className='nav-links' onClick={closeMobileMenu}>
                             Skills
                         </a>
                     </li>
                     <li className='nav-item'>
-                        <a href='#experiencespace' className='nav-links' onClick={closeMobileMenu}>
+                        <a href='#experiencesection' className='nav-links' onClick={closeMobileMenu}>
                             Experience
                         </a>
                     </li>
-
+                    <li className='nav-item'>
+                        <a href='#experiencespace' className='nav-links' onClick={closeMobileMenu}>
+                            About
+                        </a>
+                    </li>
+                    <li className='nav-item'>
+                        <a href='#experiencespace' className='nav-links' onClick={closeMobileMenu}>
+                            Contact
+                        </a>
+                    </li>
                     
 
                     <li className='nav-item'>
@@ -70,6 +79,7 @@ function Navbar() {
                             Resume
                         </Link>
                     </li>
+
                 </ul>
                 <Button />
 

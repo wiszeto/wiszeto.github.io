@@ -33,7 +33,7 @@ font-size: 20px;
 
 #icons {
 	position: relative;
-    padding-top: 10%;
+    padding-top: 12%;
     left: 50%;
     transform: translate(-50%, -50%);
 
@@ -51,6 +51,7 @@ font-size: 20px;
 #tooltip {
 	position: relative;
 	display: inline-block;
+	cursor: default;
   }
   
   #tooltip #tooltiptext {
@@ -74,41 +75,23 @@ font-size: 20px;
 
   @media screen and (max-width: 960px) {
 	#fronttext h1 {
-	  font-size: 42px;
+	  font-size: 33px;
 	  color: white;
 	
 	  line-height: 0px;
 	}
 	
 	#fronttext h2 {
-	  font-size: 15px;
+	  font-size: 12px;
 	  color: white;
 	  line-height:0px;
 	}
+
+	#icons {
+		padding-top: 16%;
+	}
 	
   }
 
 
 
-#scrolldown {
-	font-family: 'PT Sans';
-	color: white;
-    position: absolute;
-
-	top: 95%;
-
-  	transform: translate(-50%, -50%);
-	animation: MoveUpDown 2.5s linear infinite;
-	cursor: pointer;
-	
-
-}
-
-@keyframes MoveUpDown {
-	0%, 100% {
-	  transform: translateY(0);
-	}
-	50% {
-	  transform: translateY(-10px);
-	}
-  }

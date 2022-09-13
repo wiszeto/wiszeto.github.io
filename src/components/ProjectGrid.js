@@ -5,6 +5,10 @@ import pyimg from '../images/pythonimg.png'
 
 
 function ProjectGrid(props) {
+  const raspi = {
+    SSH:'yellow',
+    Docker:'green'
+  }
     return (
       <div>
         <h1 class='sectiontitle'>Projects</h1>
@@ -24,7 +28,7 @@ function ProjectGrid(props) {
                 img={require("../images/rasppi.jpg")}
                 title="Raspberry Pi Server"
                 description="Currently hosting docker containers with a Raspberry Pi 4b 8gb using Rasbian OS Lite. Became more familiar with Bash terminal."
-                skills="Skills: SSH, Bash, Docker, Raspberry Pi"
+                skill={raspi}
                 link1=""
                 link2=""
                 btn1="Source"
@@ -72,6 +76,17 @@ function ProjectGrid(props) {
                 link1="https://devpost.com/software/singify"
                 link2="https://github.com/ObjectJosh/Singify"
                 btn1="Devpost"
+                btn2="Github"
+              />
+
+              <CardGrid
+                img={require("../images/singify.png")}
+                title="Remote Controlled DC FAN"
+                description="A remote controled fan that has the ability to rotate by rotary enocoder, rotate by remote IR sensor, or auto-rotate."
+                skills="Skills: Python, Spotify, Youtube"
+                link1="https://devpost.com/software/singify"
+                link2="https://github.com/ObjectJosh/Singify"
+                btn1="Demo"
                 btn2="Github"
               />
         </div>

@@ -5,6 +5,8 @@ import FESkills from "./FESkills";
 import BESkills from "./BESkills";
 import EESkills from "./EESkills";
 import TSkills from "./TSkills";
+import ImageSlider from './ImageSlider';
+import { SliderData } from './SliderData';
 
 function Tabs() {
     const [toggleState, setToggleState] = useState(1);
@@ -48,6 +50,7 @@ function Tabs() {
            </div>
            <div className={toggleState === 4 ? "content active-content" : "content"}>
               <TSkills />
+              <ImageSlider slides={SliderData} />
            </div>
          </div>
         </div>

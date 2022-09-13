@@ -1,7 +1,7 @@
 .dropdown-menu {
     width: 200px;
     position: absolute;
-    top: 70px;
+    top: 50px;
     list-style: none;
     text-align: start;
     padding: 0;
@@ -9,7 +9,7 @@
 }
 
 .dropdown-menu li {
-    background: #1888ff;
+    background: #E02844;
     cursor:ponter;
 
 }
