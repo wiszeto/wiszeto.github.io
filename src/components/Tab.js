@@ -50,7 +50,6 @@ function Tabs() {
            </div>
            <div className={toggleState === 4 ? "content active-content" : "content"}>
               <TSkills />
-              <ImageSlider slides={SliderData} />
            </div>
          </div>
         </div>

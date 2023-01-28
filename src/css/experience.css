@@ -1,6 +1,7 @@
 .experience-container {
     margin: 0% 10%;
     border: 5px solid white;
+    outline: 4px solid #E02844;
     border-radius: 1.6rem;
     background-color: grey;
 }

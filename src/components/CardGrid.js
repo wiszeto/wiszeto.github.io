@@ -10,7 +10,7 @@ function CardGrid(props) {
           <img src={props.img} class="card__image" />
           <h2 className="card__title">{props.title}</h2>
           <p className="card__description">{props.description}</p>
-
+          
         </div>
         <div id="button__div">
 

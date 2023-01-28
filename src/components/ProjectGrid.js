@@ -1,7 +1,6 @@
 import React, {useState} from 'react';
 import "../css/projectgrid.css";
 import CardGrid from './CardGrid.js'
-import pyimg from '../images/pythonimg.png'
 
 
 function ProjectGrid(props) {
@@ -13,61 +12,37 @@ function ProjectGrid(props) {
       <div>
         <h1 class='sectiontitle'>Projects</h1>
         <div className="wrapper">
-              <CardGrid
-                img={require("../images/altiumimg.jpg")}
-                title="Altium Projects"
-                description="Developed a simple PCB that "
-                skills="Skills: "
-                link1="https://www.youtube.com/"
-                link2="https://www.ebay.com/sh/ovw"
-                btn1="Source"
-                btn2="Github"
-              />
-
-              <CardGrid
-                img={require("../images/rasppi.jpg")}
-                title="Raspberry Pi Server"
-                description="Currently hosting docker containers with a Raspberry Pi 4b 8gb using Rasbian OS Lite. Became more familiar with Bash terminal."
-                skill={raspi}
-                link1=""
-                link2=""
-                btn1="Source"
-                btn2="Github"
-              />
-
+            
               <CardGrid
                 img={require("../images/chbot.png")}
                 title="Course Hero Bot"
-                description='+100 daily users, used by over 30,000+ students, generated over 16 million files, and is currently on 400+ servers.'
+                description='A discord bot that unlocks resources from coursehero.com. Over +65,000 unique users, +20 million files generated, +200 daily users.'
                 skills="Skills: Python, OOP, Discord.py, Git, Server Hosting, Data/Databases. "
-                link1="https://discord.gg/QAeGWrKRK5"
-                link2=""
+                link1="https://discord.gg/Upk84Zx92U"
+                link2="https://www.youtube.com/watch?v=0Nf_HmQ5zVM"
                 btn1="Source"
-                btn2="Github"
+                btn2="Demo"
               />
-
               <CardGrid
                 img={require("../images/portfolio.png")}
                 title="React Portfolio Website"
-                description="A responsive portfolio website built with React.js. Utilizes functional components, props, and npm. "
+                description="A responsive portfolio website built with React.js. Utilizes functional components and no external UI packages were used."
                 skills="Skills: ReactJS, NodeJS, HTML, CSS, Git, Server Hosting"
-                link1=""
-                link2=""
+                link1="https://wiszeto.com/"
+                link2="https://github.com/wiszeto/wiszeto.github.io"
                 btn1="Source"
                 btn2="Github"
               />
-
               <CardGrid
                 img={require("../images/ebay.png")}
                 title="Ebay Seller"
                 description="Ranked as a Top-Rated Seller with over 145+ vouches with a 100% positive reputation score. Over 750+ transactions, with $500+ in monthly sales."
                 skills="Skills: Customer Service, Thread Design, Inventory Management"
-                link1="https://www.ebay.com/fdbk/feedback_profile/wilsonuwu"
-                link2=""
-                btn1="Vouches"
-                btn2="Listings"
+                link1="https://www.ebay.com/usr/wilsonuwu"
+                link2="https://www.ebay.com/fdbk/feedback_profile/wilsonuwu"
+                btn1="Profile"
+                btn2="Vouches"
               />
-
               <CardGrid
                 img={require("../images/singify.png")}
                 title="Signify"
@@ -78,16 +53,35 @@ function ProjectGrid(props) {
                 btn1="Devpost"
                 btn2="Github"
               />
-
               <CardGrid
-                img={require("../images/singify.png")}
+                img={require("../images/dcfan.png")}
                 title="Remote Controlled DC FAN"
                 description="A remote controled fan that has the ability to rotate by rotary enocoder, rotate by remote IR sensor, or auto-rotate."
                 skills="Skills: Python, Spotify, Youtube"
-                link1="https://devpost.com/software/singify"
-                link2="https://github.com/ObjectJosh/Singify"
+                link1="https://youtu.be/SRNvu3Tf0jM?t=25"
+                link2="https://github.com/wiszeto/RemoteDCFan"
                 btn1="Demo"
                 btn2="Github"
+              />
+              <CardGrid
+                img={require("../images/rasppi.jpg")}
+                title="Raspberry Pi Server"
+                description="[in-progress]Currently hosting docker containers with a Raspberry Pi 4b 8gb using Rasbian OS Lite. Became more familiar with Bash terminal."
+                skill={raspi}
+                link1=""
+                link2=""
+                btn1="Source N/A"
+                btn2="Github N/A"
+              />
+              <CardGrid
+                img={require("../images/altiumimg.jpg")}
+                title="Altium Projects"
+                description="[in-progress]"
+                skills="Skills: "
+                link1="#"
+                link2="#"
+                btn1="Source N/A"
+                btn2="Github N/A"
               />
         </div>
       </div>
