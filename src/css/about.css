@@ -1,16 +1,26 @@
 .about {
-    margin: 0% 10%;
+margin: 0% 10%;
+}
+
+.about-subtitle {
+margin-top: 0;
+margin-bottom: 1.5rem;
+font-size: 2.5rem;
+font-weight: bold;
+
 }
 
 .about-container {
-    margin: 0% 10%;
-    border: 5px solid white;
-    outline: 4px solid #E02844;
-    border-radius: 1.6rem;
-    background-color: grey;
+margin: 0% 10%;
+outline: 4px solid #E02844;
+border-radius: 1.6rem;
+background-color: #212529; /* a dark shade of grey */
+padding: 2rem;
+box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25); /* add a box shadow */
 }
 
 .about-text {
-    margin: 0% 5%;
-    text-align: ;
+margin: 0% 5%;
+color: #f2f2f2; /* a lighter shade of white /
+line-height: 1.5; / increase line height for better readability */
 }

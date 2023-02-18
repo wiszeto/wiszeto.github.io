@@ -1,36 +1,36 @@
 .experience-container {
     margin: 0% 10%;
-    border: 5px solid white;
+    border: 5px solid #1a1a1a;
     outline: 4px solid #E02844;
     border-radius: 1.6rem;
-    background-color: grey;
-}
+    background-color: #333;
+    color: #fff;
+  }
 
 .ex-ul{
     list-style-type:none;
     padding:0;
     margin:0;
 }
-.ex-section{
-    padding:0px 10px;
-    border-bottom:2px dotted #ddd;
-    color: white;
+.ex-section {
+    padding: 0px 10px;
+    border-bottom: 2px dotted #ddd;
     font-size: 25px;
     line-height: 0px;
     padding-bottom: 30px;
-}
-.ex-points {
+  }
+  .ex-points {
     line-height: normal;
     list-style-type: disc;
-}
+    color: #ddd;
+  }
 .ex-ul li:last-child{
     border-bottom:none
 }
 
 @media screen and (max-width: 960px) {
-    .ex-ul li{
-        font-size: 15px;
-
+    .ex-ul li {
+      font-size: 15px;
     }
-}
+  }
 

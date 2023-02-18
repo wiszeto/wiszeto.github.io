@@ -36,7 +36,7 @@ function ProjectGrid(props) {
               <CardGrid
                 img={require("../images/ebay.png")}
                 title="Ebay Seller"
-                description="Ranked as a Top-Rated Seller with over 145+ vouches with a 100% positive reputation score. Over 750+ transactions, with $500+ in monthly sales."
+                description="Ranked as a Top-Rated Seller with over 150+ vouches with a 100% positive reputation score. Over 800+ transactions, with $500+ in monthly sales."
                 skills="Skills: Customer Service, Thread Design, Inventory Management"
                 link1="https://www.ebay.com/usr/wilsonuwu"
                 link2="https://www.ebay.com/fdbk/feedback_profile/wilsonuwu"
@@ -64,6 +64,16 @@ function ProjectGrid(props) {
                 btn2="Github"
               />
               <CardGrid
+                img={require("../images/vendingmachine.jpg")}
+                title="Basys 3 Vending Machine"
+                description="A vending machine built with the Basys-3 FPGA board, utilizing SystemVerilog and modular design."
+                skills="Skills: Python, Spotify, Youtube"
+                link1="https://www.youtube.com/watch?v=hONQs_XhRxM"
+                link2="https://github.com/wiszeto/Mock-Vending-Machine"
+                btn1="Demo"
+                btn2="Github"
+              />
+              <CardGrid
                 img={require("../images/rasppi.jpg")}
                 title="Raspberry Pi Server"
                 description="[in-progress]Currently hosting docker containers with a Raspberry Pi 4b 8gb using Rasbian OS Lite. Became more familiar with Bash terminal."
@@ -78,8 +88,8 @@ function ProjectGrid(props) {
                 title="Altium Projects"
                 description="[in-progress]"
                 skills="Skills: "
-                link1="#"
-                link2="#"
+                link1=""
+                link2=""
                 btn1="Source N/A"
                 btn2="Github N/A"
               />

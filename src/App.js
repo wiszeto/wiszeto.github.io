@@ -11,6 +11,7 @@ import Experience from './components/Experience';
 import About from './components/About';
 import ImageSlider from './components/ImageSlider';
 import { SliderData } from './components/SliderData';
+import Footer from './components/footer';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <div id='page'>
               <Navbar />
               <FrontPage />
+              
               <div id='aboutsection'></div>
               <div id='section'>
                 <About />
@@ -38,7 +40,11 @@ function App() {
               <div id='section'>
                 <Experience />
               </div>
-              
+              <div id='xperiencesection'></div>
+              <div id='section'>
+              <Footer />
+              </div>
+
           </div>
         </Router>
   );
