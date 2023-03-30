@@ -1,6 +1,7 @@
 * {
   font-family: 'PT Sans';
 }
+
 .card {
   overflow: hidden;
   border-radius: 1.5rem;
@@ -10,7 +11,6 @@
   transition: transform 300ms ease-in;
   background-color: #212529;
   width: 100%;
-
 }
 
 .card__image {
@@ -33,7 +33,7 @@
   color: white;
 }
 
-.card__skills {
+.card__tags {
   margin: 5px;
   padding: 0 1rem;
   color: rgba(255, 255, 255, 0.75);
@@ -68,3 +68,19 @@
   transform: scale(1.05);
 }
 
+
+.modal__tags {
+  display: flex;
+  flex-wrap: inherit;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal__tag {
+  margin: 0.1rem;
+  padding: 0.1rem 0.5rem;
+  background-color: blue;
+  color: white;
+  border-radius: 4px;
+  font-size: 0.8rem;
+}

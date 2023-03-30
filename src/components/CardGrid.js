@@ -1,5 +1,6 @@
 import React from 'react';
 import "../css/cardgrid.css";
+import Modal from './modal'
 
 function CardGrid(props) {
   return (
@@ -9,6 +10,12 @@ function CardGrid(props) {
         <h2 className="card__title">{props.title}</h2>
         <p className="card__description">{props.description}</p>
       </div>
+      {/* <div className="modal__tags">
+          <p>Tags: </p>
+          {props.tags.map((tag, index) => (
+            <span key={index} className="modal__tag">{tag}</span>
+          ))}
+        </div> */}
       <div id="button__div">
         {props.link1 ? (
           <a href={props.link1} target="_blank" rel="noopener noreferrer">

@@ -19,22 +19,18 @@ const ImageSlider = ({ slides }) => {
   }
 
   return (
-    
     <div className='imgslider'>
+      <i class="fa-sharp fa-solid fa-chevron-left imgleft-arrow" onClick={prevSlide}></i>
       {SliderData.map((slide, index) => {
         return (
-        <>
-          <i class="fa-sharp fa-solid fa-chevron-left imgleft-arrow" onClick={prevSlide}></i>
           <div className={index === current ? 'slide active' : 'imgslide'} key={index}>
             {index === current && (
               <img src={slide.image} alt='travel image' className='sliderimage' />
-              
             )}
           </div>
-          <i class="fa-sharp fa-solid fa-chevron-right imgright-arrow" onClick={nextSlide}></i>
-        </>
         );
       })}
+      <i class="fa-sharp fa-solid fa-chevron-right imgright-arrow" onClick={nextSlide}></i>
     </div>
   );
 };

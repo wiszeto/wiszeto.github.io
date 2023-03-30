@@ -1,11 +1,13 @@
-.flex-project-container{
+.flex-project-container {
 
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 
 }
-.flex-project-container>div{
+
+.flex-project-container>div {
+    position: relative;
     background-color: #212529;
     width: 200px;
     height: 200px;
@@ -17,18 +19,19 @@
     border-radius: 30px;
 }
 
-.flex-project-container img{
+.flex-project-container img {
     margin-top: 27px;
 }
-.flex-project-container h3{
+
+.flex-project-container h3 {
     color: white;
     margin-top: 0px;
 
 }
-.flex-project-container > div:hover
-{
-transform: scale(1.05);
-background-color: #43464b;
+
+.flex-project-container>div:hover {
+    transform: scale(1.15);
+    background-color: #43464b;
 
 
 }
@@ -36,4 +39,53 @@ background-color: #43464b;
 .image {
     width: 80px;
     height: 80px;
+}
+
+.flip-container {
+    perspective: 1000px;
+    cursor: pointer;
+}
+
+.flip-container:hover .flipper,
+.flip-container.hover .flipper {
+    transform: rotateY(180deg);
+}
+.flip-container.clicked .flipper {
+    transform: rotateY(180deg);
+  }
+.flipper {
+    transition: 0.6s;
+    transform-style: preserve-3d;
+    position: relative;
+}
+
+.back {
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: rotateY(180deg);
+    font-size: 15px;
+    color: white;
+    padding: 20px 10px;
+    line-height: 1.5;
+    text-align: start;
+    
+  }
+
+
+.front {
+    backface-visibility: hidden;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+
+.flipped {
+    transform: rotateY(180deg);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }

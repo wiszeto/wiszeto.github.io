@@ -8,6 +8,7 @@ import Skills from './components/Skills';
 import FrontPage from './components/FrontPage';
 import Tabs from './components/Tab';
 import Experience from './components/Experience';
+import Cards from './components/test';
 import About from './components/About';
 import ImageSlider from './components/ImageSlider';
 import { SliderData } from './components/SliderData';
@@ -40,6 +41,12 @@ function App() {
               <div id='section'>
                 <Experience />
               </div>
+              
+              <div id='experiencesection'></div>
+              <div id='section'>
+                <Cards />
+              </div>
+
               <div id='xperiencesection'></div>
               <div id='section'>
               <Footer />

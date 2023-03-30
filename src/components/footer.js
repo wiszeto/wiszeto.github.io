@@ -8,13 +8,13 @@ function Footer() {
         <div className="row">
           <div className="col-sm-12 col-md-6">
             <p className="footer__text">Copyright © 2023 
-              <a href="#" className="footer__link"> Vibes LLC</a>. All rights reserved.</p>
+              <a href="wiszeto.com" className="footer__link"> Wilson's Website</a>. All rights reserved.</p>
           </div>
           <div className="col-sm-12 col-md-6">
             <ul className="footer__list">
-              <li><a href="#" className="footer__link">Privacy Policy</a></li>
-              <li><a href="#" className="footer__link">Terms of Service</a></li>
-              <li><a href="#" className="footer__link">Contact</a></li>
+              <li><a href="#" className="footer__link"></a></li>
+              <li><a href="#" className="footer__link"></a></li>
+              <li><a href="#" className="footer__link"></a></li>
             </ul>
           </div>
         </div>

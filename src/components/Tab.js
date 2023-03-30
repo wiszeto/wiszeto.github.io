@@ -8,6 +8,7 @@ import TSkills from "./TSkills";
 import ImageSlider from './ImageSlider';
 import { SliderData } from './SliderData';
 
+
 function Tabs() {
     const [toggleState, setToggleState] = useState(1);
   
@@ -23,13 +24,13 @@ function Tabs() {
         
         <div className="bloc-tabs">
           <button className={toggleState === 1 ? "tabs active-tabs" : "tabs"} onClick={() => toggleTab(1)}>
-            Front End
+            Electrical Engineering
           </button>
           <button className={toggleState === 2 ? "tabs active-tabs" : "tabs"} onClick={() => toggleTab(2)}>
             Back End
           </button>
           <button className={toggleState === 3 ? "tabs active-tabs" : "tabs"} onClick={() => toggleTab(3)}>
-            Electrical Engineering
+            Front End
           </button>
           <button className={toggleState === 4 ? "tabs active-tabs" : "tabs"} onClick={() => toggleTab(4)}>
             Technology
@@ -38,7 +39,7 @@ function Tabs() {
         <div id='out'>
          <div className="content-tabs">
            <div className={toggleState === 1 ? "content active-content" : "content"}>
-              <FESkills />
+              <EESkills />
            </div>
    
            <div className={toggleState === 2 ? "content active-content" : "content"}>
@@ -46,7 +47,7 @@ function Tabs() {
            </div>
    
            <div className={toggleState === 3 ? "content active-content" : "content"}>
-              <EESkills />
+              <FESkills />
            </div>
            <div className={toggleState === 4 ? "content active-content" : "content"}>
               <TSkills />

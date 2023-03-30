@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import "../css/skills.css";
+
 import pyimg from '../images/pythonimg.png';
 import htmlimg from '../images/html5logo.jpg';
 import cssimg from '../images/csslogo.png';
@@ -18,9 +19,22 @@ import dockerimg from '../images/dockerlogo.jpg';
 import arduinoimg from '../images/arduinologo.png';
 
 function BESkills(props) {
+  const handleClick = (event) => {
+    const flipContainer = event.currentTarget.closest('.flip-container');
+    flipContainer.classList.toggle('hover');
+  };
   return (
     <section id="skillheader" className="flex-project-container">
-      <div><img className="image" src={pyimg} alt="python"/><h3>Python</h3></div>
+      <div className="flip-container">
+        <div className="flipper">
+          <div className="front">
+            <img className="image" src={pyimg} alt="python"/><h3>Python</h3>
+          </div>
+          <div className="back">
+            <p>Python is a powerful programming language used for a wide range of applications.</p>
+          </div>
+        </div>
+      </div>
       <div><img className="image" src={nodeimg}  alt="node"/><h3>Node</h3></div>
       <div><img className="image" src={awsimg} alt="aws"/><h3>AWS</h3></div>
       <div><img className="image" src={seleniumimg} alt="selenium"/><h3>Selenium</h3></div>
