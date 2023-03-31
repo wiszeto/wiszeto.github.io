@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.3c68b769.css",
-    "main.js": "/static/js/main.fd00c490.js",
+    "main.css": "/static/css/main.6ecafab0.css",
+    "main.js": "/static/js/main.31fb5c41.js",
     "static/media/electric.gif": "/static/media/electric.43bdd075f731495e7688.gif",
     "static/media/portfolio.png": "/static/media/portfolio.57317f3514cb01161a0d.png",
     "static/media/dcfan.png": "/static/media/dcfan.3d72dbf5010ded163d4b.png",
@@ -20,6 +20,7 @@
     "static/media/dockerlogo.jpg": "/static/media/dockerlogo.a5441aa867acc6a25934.jpg",
     "static/media/seleniumlogo.png": "/static/media/seleniumlogo.5b027499285764bf2b1c.png",
     "static/media/altiumlogo.png": "/static/media/altiumlogo.e4d915db84978f37ee17.png",
+    "static/media/roblox.png": "/static/media/roblox.424025b3b41234548067.png",
     "static/media/scrumlogo.png": "/static/media/scrumlogo.4f8794c2051c8116e2d0.png",
     "static/media/singify.png": "/static/media/singify.ec8cb777224d0f4f4e56.png",
     "static/media/discord.png": "/static/media/discord.ef8d9c88e020507818c2.png",
@@ -32,11 +33,11 @@
     "static/media/nodelogo.svg": "/static/media/nodelogo.829c557e87571a03ac6b4713a42d6013.svg",
     "static/media/lualogo.svg": "/static/media/lualogo.94b96a6c7f17217f9d35bdc8d65908c8.svg",
     "index.html": "/index.html",
-    "main.3c68b769.css.map": "/static/css/main.3c68b769.css.map",
-    "main.fd00c490.js.map": "/static/js/main.fd00c490.js.map"
+    "main.6ecafab0.css.map": "/static/css/main.6ecafab0.css.map",
+    "main.31fb5c41.js.map": "/static/js/main.31fb5c41.js.map"
   },
   "entrypoints": [
-    "static/css/main.3c68b769.css",
-    "static/js/main.fd00c490.js"
+    "static/css/main.6ecafab0.css",
+    "static/js/main.31fb5c41.js"
   ]
 }
