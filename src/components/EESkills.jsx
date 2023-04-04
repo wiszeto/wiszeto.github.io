@@ -6,13 +6,18 @@ import raspberrypiimg from '../images/raspberrypilogo.png';
 import altiumimg from '../images/altiumlogo.png';
 import arduinoimg from '../images/arduinologo.png';
 import ltspiceimg from '../images/ltspicelogo.png';
+import cimg from '../images/C_Logo.png';
 
 function EESkills({ title, img }) {
   return (
     <section id="skillheader" className="flex-project-container">
-      <div>
+      {/* <div>
         <img className="image" src={altiumimg} alt="altium" />
         <h3>Altium</h3>
+      </div> */}
+      <div>
+        <img className="image" src={cimg} alt="C" />
+        <h3>C</h3>
       </div>
       <div>
         <img className="image" src={matlabimg} alt="matlab" />

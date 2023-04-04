@@ -32,6 +32,11 @@ function App() {
                 <ProjectGrid />
               </div>
 
+              <div id='experiencesection'></div>
+              <div id='section'>
+                <Cards />
+              </div>
+              
               <div id='skillsection'></div>
               <div id='section'>
                 <Tabs />
@@ -42,10 +47,7 @@ function App() {
                 <Experience />
               </div>
               
-              <div id='experiencesection'></div>
-              <div id='section'>
-                <Cards />
-              </div>
+              
 
               <div id='xperiencesection'></div>
               <div id='section'>

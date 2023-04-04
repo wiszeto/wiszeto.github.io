@@ -81,7 +81,7 @@ function ProjectGrid(props) {
                 btn1="Source N/A"
                 btn2="Github N/A"
               />
-              <CardGrid
+              {/* <CardGrid
                 img={require("../images/altiumimg.jpg")}
                 title="Altium Projects"
                 description="[in-progress]"
@@ -90,7 +90,7 @@ function ProjectGrid(props) {
                 link2=""
                 btn1="Source N/A"
                 btn2="Github N/A"
-              />
+              /> */}
         </div>
       </div>
     );

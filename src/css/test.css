@@ -1,44 +1,63 @@
 .card1-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    grid-gap: 20px;
-    margin: 0% 10%;
-}
-
-.card1 {
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    gap: 20px;
+    margin: 0 10%;
+  }
+  
+  .card1 {
     border-radius: 1.6rem;
     background-color: #333;
     color: #fff;
     outline: 3px solid #E02844;
-}
-
-.card1-header {
+  }
+  
+  .card1-header {
     border-radius: 1.1rem 1.1rem 0 0;
-    height: 15%;
+    height: 10%;
     background-color: #e02844;
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-.card1-header h2 {
+  }
+  
+  .card1-header h2 {
     font-size: 1.2em;
-}
 
-.card1-body {
-    padding: 0px 0px;
+  }
+  
+  .card1-body {
+    padding: 0;
+    margin: 0;
     list-style: none;
-
-}
-
-.card1-body li {
-    font-size: 25px;
-    padding: 0px 0px;
-    border-bottom: 2px dotted #ddd;
-}
-
-@media screen and (max-width: 960px) {
-    .card-body li {
-        font-size: 15px;
+  }
+  
+  .card1-body ul{
+    font-size: 15px;
+    padding-top: 5px;
+    /* border-bottom: 2px dotted #ddd; */
+  }
+  
+  @media screen and (max-width: 960px) {
+    .card1-body li {
+      font-size: 15px;
     }
+  }
+  
+  .lab-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 10px;
+    margin: 0;
+}
+
+.comment {
+    margin-top: 0%;
+    margin-bottom: 0%;
+}
+
+.link2 {
+    margin-top: 0%;
+    margin-bottom: 0%;
 }
