@@ -1,0 +1,33 @@
+.nav-links {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .nav-link {
+    margin-bottom: 10px;
+    font-size: 1.5em;
+    color: white;
+    text-decoration: none;
+  }
+  
+  .nav-link:hover {
+    text-decoration: underline;
+  }
+  :root {
+    --primary: #5F9A80;
+  }
+  .btn {
+    padding: 6px 18px;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    font-size: 16px;
+    color: #fff;
+    cursor: pointer;
+    background-color: var(--primary);
+
+  }
+  
+  .btn:hover {
+    transform: scale(1.03);
+  }
