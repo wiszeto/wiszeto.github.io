@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/wiszeto.github.io/static/css/main.57871287.css",
+    "main.css": "/wiszeto.github.io/static/css/main.e1897be6.css",
     "main.js": "/wiszeto.github.io/static/js/main.a25433d5.js",
     "static/js/787.fbf24340.chunk.js": "/wiszeto.github.io/static/js/787.fbf24340.chunk.js",
     "static/media/portfolio.png": "/wiszeto.github.io/static/media/portfolio.57317f3514cb01161a0d.png",
@@ -26,12 +26,12 @@
     "static/media/nodelogo.svg": "/wiszeto.github.io/static/media/nodelogo.829c557e87571a03ac6b4713a42d6013.svg",
     "static/media/lualogo.svg": "/wiszeto.github.io/static/media/lualogo.94b96a6c7f17217f9d35bdc8d65908c8.svg",
     "index.html": "/wiszeto.github.io/index.html",
-    "main.57871287.css.map": "/wiszeto.github.io/static/css/main.57871287.css.map",
+    "main.e1897be6.css.map": "/wiszeto.github.io/static/css/main.e1897be6.css.map",
     "main.a25433d5.js.map": "/wiszeto.github.io/static/js/main.a25433d5.js.map",
     "787.fbf24340.chunk.js.map": "/wiszeto.github.io/static/js/787.fbf24340.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.57871287.css",
+    "static/css/main.e1897be6.css",
     "static/js/main.a25433d5.js"
   ]
 }
