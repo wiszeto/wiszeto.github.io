@@ -31,3 +31,8 @@
   .btn:hover {
     transform: scale(1.03);
   }
+
+  .nav-link.active {
+    color: #FFF44F;
+  }
+  
