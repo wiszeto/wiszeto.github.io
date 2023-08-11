@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import '../css/Profile.css';
+import React, { useState, useEffect } from 'react';
+import '../css/Footer.css';
 
 import linkedin from '../images/linkedin.png';
 import github from '../images/github.png';
@@ -8,10 +8,14 @@ import repl from '../images/repl.png';
 import mal from '../images/MAL.png';
 import email from '../images/email.png';
 
-const Profile = () => {
-
+const Footer = () => {
+  const [lastModified, setLastModified] = useState('');
   const [toolTipTextEmail, setToolTipTextEmail] = useState('Email📋');
   const [toolTipTextDiscord, setToolTipTextDiscord] = useState('Discord📋');
+
+  useEffect(() => {
+    setLastModified(new Date(document.lastModified).toLocaleString());
+  }, []);
 
   const copyEmail = (e) => {
     navigator.clipboard.writeText('wilsonszerto99@gmail.com');
@@ -26,10 +30,10 @@ const Profile = () => {
   };
 
   return (
-    <div className="profile-section">
-      <h1 className="profile-name">Wilson Szeto </h1>
-      <h2 className="profile-occupation">Software Developer at CCI</h2>
-      <p className="profile-description">I blend electrical engineering knowledge with coding skills to convert a vision into meaningful and useful products.</p>
+    <footer className="footer">
+      <p>Last modified: {lastModified}</p>
+      <p>Created with React.js. Deployed with Github Pages.</p>
+      <p>© 2023 by Wilson Szeto.</p>
       <div id='icons'>
         <a href='https://www.linkedin.com/in/wilson-szeto-3a4b591aa/' target='_blank' rel='noopener noreferrer' className='icon-link'>
           <div id='tooltip' className='icon-link'>
@@ -38,29 +42,9 @@ const Profile = () => {
           </div>
         </a>
 
-        <a href='https://github.com/wiszeto' target='_blank' rel='noopener noreferrer' className='icon-link'>
-          <div id='tooltip' className='icon-link'>
-            <img src={github} alt='Github' width='35px' height='35px' />
-            <span className='tooltiptext'>Github</span>
-          </div>
-        </a>
 
-        <a href='https://replit.com/@WilsonSzeto' target='_blank' rel='noopener noreferrer' className='icon-link'>
-          <div id='tooltip' className='icon-link'>
-            <img src={repl} alt='Repl' width='35px' height='35px' />
-            <span className='tooltiptext'>replit</span>
-          </div>
-        </a>
-
-        <a href='https://myanimelist.net/animelist/willievibes?status=2' target='_blank' rel='noopener noreferrer' className='icon-link'>
-          <div id='tooltip' className='icon-link'>
-            <img src={mal} alt='Repl' width='35px' height='35px' />
-            <span className='tooltiptext'>My Anime List</span>
-          </div>
-        </a>
-
-        <div 
-          id='tooltip' 
+        <div
+          id='tooltip'
           className='icon-link'
           onClick={copyEmail}
           style={{ cursor: 'pointer' }}
@@ -69,8 +53,9 @@ const Profile = () => {
           <span className='tooltiptext'>{toolTipTextEmail}</span>
         </div>
 
-        <div 
-          id='tooltip' 
+
+        <div
+          id='tooltip'
           className='icon-link'
           onClick={copyDiscord}
           style={{ cursor: 'pointer' }}
@@ -79,8 +64,8 @@ const Profile = () => {
           <span className='tooltiptext'>{toolTipTextDiscord}</span>
         </div>
       </div>
-    </div>
+    </footer>
   );
-};
+}
 
-export default Profile;
+export default Footer;
