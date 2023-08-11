@@ -19,6 +19,8 @@ import arduinoimg from '../images/arduinologo.png'
 import C from '../images/C_Logo.png'
 import scrum from '../images/scrumlogo.png'
 import ltspice from '../images/ltspicelogo.png'
+import oscilloscope from '../images/oscilloscope_logo.png'
+import multimeter from '../images/multimeter_logo.png'
 
 const Skills = () => (
   <><h2 id="skills">Skills</h2>
@@ -40,6 +42,8 @@ const Skills = () => (
     <IconWithModal icon={arduinoimg} modalText="Arduino Modal" />
     <IconWithModal icon={scrum} modalText="Scrum Modal" />
     <IconWithModal icon={ltspice} modalText="LTSpice Modal" />
+    <IconWithModal icon={multimeter} modalText="Multimeter Modal" />
+    <IconWithModal icon={oscilloscope} modalText="Oscilloscope Modal" />
   </section>
   </>
 );
