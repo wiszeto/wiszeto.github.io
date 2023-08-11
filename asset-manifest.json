@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/wiszeto.github.io/static/css/main.bd2e931e.css",
-    "main.js": "/wiszeto.github.io/static/js/main.c4fbfb43.js",
+    "main.js": "/wiszeto.github.io/static/js/main.527ac069.js",
     "static/js/787.fbf24340.chunk.js": "/wiszeto.github.io/static/js/787.fbf24340.chunk.js",
     "static/media/portfolio.png": "/wiszeto.github.io/static/media/portfolio.57317f3514cb01161a0d.png",
     "static/media/vendingmachine.jpg": "/wiszeto.github.io/static/media/vendingmachine.6be554fa7c694b8f7dbb.jpg",
@@ -13,7 +13,9 @@
     "static/media/raspberrypilogo.png": "/wiszeto.github.io/static/media/raspberrypilogo.bd332561b83bcd50a0f7.png",
     "static/media/oscilloscope.png": "/wiszeto.github.io/static/media/oscilloscope.de623277fc2061fcc6bd.png",
     "static/media/msofficelogo.png": "/wiszeto.github.io/static/media/msofficelogo.5bb50e40b9bb5425b7ca.png",
+    "static/media/oscilloscope_logo.png": "/wiszeto.github.io/static/media/oscilloscope_logo.261e98670293ce4f9fe7.png",
     "static/media/chbot.png": "/wiszeto.github.io/static/media/chbot.d1c2a63b3ec1adb64c2e.png",
+    "static/media/multimeter_logo.png": "/wiszeto.github.io/static/media/multimeter_logo.a00cdf14be4e215f60ed.png",
     "static/media/html5logo.jpg": "/wiszeto.github.io/static/media/html5logo.0d7034b0984ed2d7ca50.jpg",
     "static/media/seleniumlogo.png": "/wiszeto.github.io/static/media/seleniumlogo.5b027499285764bf2b1c.png",
     "static/media/C_Logo.png": "/wiszeto.github.io/static/media/C_Logo.bbbbbabc8c191bfb99bf.png",
@@ -29,11 +31,11 @@
     "static/media/lualogo.svg": "/wiszeto.github.io/static/media/lualogo.94b96a6c7f17217f9d35bdc8d65908c8.svg",
     "index.html": "/wiszeto.github.io/index.html",
     "main.bd2e931e.css.map": "/wiszeto.github.io/static/css/main.bd2e931e.css.map",
-    "main.c4fbfb43.js.map": "/wiszeto.github.io/static/js/main.c4fbfb43.js.map",
+    "main.527ac069.js.map": "/wiszeto.github.io/static/js/main.527ac069.js.map",
     "787.fbf24340.chunk.js.map": "/wiszeto.github.io/static/js/787.fbf24340.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.bd2e931e.css",
-    "static/js/main.c4fbfb43.js"
+    "static/js/main.527ac069.js"
   ]
 }
