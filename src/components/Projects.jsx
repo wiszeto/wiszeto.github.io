@@ -16,6 +16,15 @@ const Projects = () => (
       ]}
     />
     <Card
+      picture={require("../images/oscilloscope.png")}
+      title="Function Generator"
+      description="This Function Generator, powered by a NUCLEO-L4A6ZG, can produce square, sawtooth, and sinusoidal waveforms at five selectable frequencies (100Hz-500Hz). "
+      tags={["C", "Nucleo Board", "Embedded Systems", "Electrical Engineering"]}
+      buttons={[
+        { text: 'Github', link: 'https://github.com/wiszeto/EE329/tree/main/P2/Core/Src' },
+      ]}
+    />
+    <Card
       picture={require("../images/singify.png")}
       title="Singify"
       description="Won 1st place at SLO Hacks Fall 2021 Hackathon. A finish the lyrics game that plays a song, stops, & leaves players to finish the lyrics."

@@ -11,9 +11,9 @@ const Navbar = () => {
       const skillsTop = document.querySelector('#skills').offsetTop - navbarHeight;
       const projectsTop = document.querySelector('#projects').offsetTop - navbarHeight;
       const experienceTop = document.querySelector('#experience').offsetTop - navbarHeight;
-    
+
       const currentScrollPos = window.pageYOffset;
-    
+
       if (currentScrollPos < skillsTop) {
         setCurrentSection('about');
       } else if (currentScrollPos < projectsTop) {
@@ -24,7 +24,7 @@ const Navbar = () => {
         setCurrentSection('experience');
       }
     };
-    
+
 
     window.addEventListener('scroll', handleScroll);
 
@@ -35,15 +35,15 @@ const Navbar = () => {
 
   return (
     <nav className="nav-links">
-      <a href="#about" className={`nav-link ${currentSection === 'about' ? 'active' : ''}`}>About</a>
-      <a href="#skills" className={`nav-link ${currentSection === 'skills' ? 'active' : ''}`}>Skills</a>
-      <a href="#projects" className={`nav-link ${currentSection === 'projects' ? 'active' : ''}`}>Projects</a>
-      <a href="#experience" className={`nav-link ${currentSection === 'experience' ? 'active' : ''}`}>Experience</a>
-      <a href='https://docs.google.com/document/d/1eMNcO5TS0PoWnj-yf94OxM6ApjHkIM_d40_Kl5dWGzA/edit?usp=sharing' target="_blank" rel="noopener noreferrer">
+      <div><a href="#about" className={`nav-link ${currentSection === 'about' ? 'active' : ''}`}>About</a></div>
+      <div><a href="#skills" className={`nav-link ${currentSection === 'skills' ? 'active' : ''}`}>Skills</a></div>
+      <div><a href="#projects" className={`nav-link ${currentSection === 'projects' ? 'active' : ''}`}>Projects</a></div>
+      <div><a href="#experience" className={`nav-link ${currentSection === 'experience' ? 'active' : ''}`}>Experience</a></div>
+      <div><a href='https://docs.google.com/document/d/1eMNcO5TS0PoWnj-yf94OxM6ApjHkIM_d40_Kl5dWGzA/edit?usp=sharing' target="_blank" rel="noopener noreferrer">
         <button className='btn'>
           Resume <i className="fas fa-external-link-alt"></i>
         </button>
-      </a>
+      </a></div>
     </nav>
   );
 };

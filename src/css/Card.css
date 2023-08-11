@@ -3,7 +3,7 @@
   grid-template-columns: 1fr 2fr;
   border-radius: 15px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-  transition: transform 0.3s ease-in-out;
+  transition: transform 0.1s ease-in-out;
   overflow: hidden;
   border: 1px solid #2F4858;
   background: #466962; 
@@ -88,7 +88,7 @@
 
 
 /* Responsive design for screens smaller than 600px */
-@media (max-width: 1300px) {
+@media (max-width: 1400px) {
   .card-container {
     grid-template-columns: 1fr;
   }
