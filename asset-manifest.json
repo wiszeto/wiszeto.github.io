@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/wiszeto.github.io/static/css/main.bd2e931e.css",
-    "main.js": "/wiszeto.github.io/static/js/main.527ac069.js",
+    "main.css": "/wiszeto.github.io/static/css/main.6f5fe771.css",
+    "main.js": "/wiszeto.github.io/static/js/main.51380f00.js",
     "static/js/787.fbf24340.chunk.js": "/wiszeto.github.io/static/js/787.fbf24340.chunk.js",
     "static/media/portfolio.png": "/wiszeto.github.io/static/media/portfolio.57317f3514cb01161a0d.png",
     "static/media/vendingmachine.jpg": "/wiszeto.github.io/static/media/vendingmachine.6be554fa7c694b8f7dbb.jpg",
@@ -18,6 +18,7 @@
     "static/media/multimeter_logo.png": "/wiszeto.github.io/static/media/multimeter_logo.a00cdf14be4e215f60ed.png",
     "static/media/html5logo.jpg": "/wiszeto.github.io/static/media/html5logo.0d7034b0984ed2d7ca50.jpg",
     "static/media/seleniumlogo.png": "/wiszeto.github.io/static/media/seleniumlogo.5b027499285764bf2b1c.png",
+    "static/media/boeing.jpg": "/wiszeto.github.io/static/media/boeing.e293465d49f5fdc121f8.jpg",
     "static/media/C_Logo.png": "/wiszeto.github.io/static/media/C_Logo.bbbbbabc8c191bfb99bf.png",
     "static/media/scrumlogo.png": "/wiszeto.github.io/static/media/scrumlogo.4f8794c2051c8116e2d0.png",
     "static/media/singify.png": "/wiszeto.github.io/static/media/singify.ec8cb777224d0f4f4e56.png",
@@ -30,12 +31,12 @@
     "static/media/nodelogo.svg": "/wiszeto.github.io/static/media/nodelogo.829c557e87571a03ac6b4713a42d6013.svg",
     "static/media/lualogo.svg": "/wiszeto.github.io/static/media/lualogo.94b96a6c7f17217f9d35bdc8d65908c8.svg",
     "index.html": "/wiszeto.github.io/index.html",
-    "main.bd2e931e.css.map": "/wiszeto.github.io/static/css/main.bd2e931e.css.map",
-    "main.527ac069.js.map": "/wiszeto.github.io/static/js/main.527ac069.js.map",
+    "main.6f5fe771.css.map": "/wiszeto.github.io/static/css/main.6f5fe771.css.map",
+    "main.51380f00.js.map": "/wiszeto.github.io/static/js/main.51380f00.js.map",
     "787.fbf24340.chunk.js.map": "/wiszeto.github.io/static/js/787.fbf24340.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.bd2e931e.css",
-    "static/js/main.527ac069.js"
+    "static/css/main.6f5fe771.css",
+    "static/js/main.51380f00.js"
   ]
 }
