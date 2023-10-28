@@ -28,8 +28,8 @@ const Profile = () => {
   return (
     <div className="profile-section">
       <h1 className="profile-name">Wilson Szeto </h1>
-      <h2 className="profile-occupation">Software Developer at CCI</h2>
-      <p className="profile-description">I blend electrical engineering knowledge with coding skills to convert a vision into meaningful and useful products.</p>
+      <h2 className="profile-occupation">Test Automation Engineer at Boeing</h2>
+      <p className="profile-description">I develop innovative solutions that create value and make a positive impact.</p>
       <div id='icons'>
         <a href='https://www.linkedin.com/in/wilson-szeto-3a4b591aa/' target='_blank' rel='noopener noreferrer' className='icon-link'>
           <div id='tooltip' className='icon-link'>

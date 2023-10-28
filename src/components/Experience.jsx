@@ -6,6 +6,12 @@ const Experience = () => (
   <section id="experience" className="content-Experience">
     <h2>Experience</h2>
     <Card
+      picture={require("../images/boeing.jpg")}
+      title="The Boeing Company - Test Automation Engineer"
+      description="Currently working on Mission Accelerator. Writing code for automation and testing. Regression testing."
+      tags={[]}
+    />
+    <Card
       picture={require("../images/sgc.png")}
       title="California Cybersecurity Institute - Software developer"
       description="Revamped legacy code of previous discord bots into modern, maintainable, and robust code for future development. Fixed internal structure and UI/UX functionality, allowing users to understand the bot intuitively and drastically reduced the number of errors users could make.
