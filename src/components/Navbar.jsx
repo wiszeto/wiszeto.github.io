@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import '../css/Navbar.css';
 
 const Navbar = () => {
@@ -39,6 +40,7 @@ const Navbar = () => {
       <div><a href="#skills" className={`nav-link ${currentSection === 'skills' ? 'active' : ''}`}>Skills</a></div>
       <div><a href="#projects" className={`nav-link ${currentSection === 'projects' ? 'active' : ''}`}>Projects</a></div>
       <div><a href="#experience" className={`nav-link ${currentSection === 'experience' ? 'active' : ''}`}>Experience</a></div>
+      {/* <div><Link to="/blog" className="nav-link">Blog</Link></div>  */}
       <div><a href='https://docs.google.com/document/d/1eMNcO5TS0PoWnj-yf94OxM6ApjHkIM_d40_Kl5dWGzA/edit?usp=sharing' target="_blank" rel="noopener noreferrer">
         <button className='btn'>
           Resume <i className="fas fa-external-link-alt"></i>
