@@ -1,14 +1,15 @@
 {
   "files": {
-    "main.css": "/wiszeto.github.io/static/css/main.93e12cc2.css",
-    "main.js": "/wiszeto.github.io/static/js/main.cf9a2c9c.js",
+    "main.css": "/wiszeto.github.io/static/css/main.0cdabfd7.css",
+    "main.js": "/wiszeto.github.io/static/js/main.5bfa196c.js",
     "static/js/787.fbf24340.chunk.js": "/wiszeto.github.io/static/js/787.fbf24340.chunk.js",
     "static/media/portfolio.png": "/wiszeto.github.io/static/media/portfolio.57317f3514cb01161a0d.png",
     "static/media/vendingmachine.jpg": "/wiszeto.github.io/static/media/vendingmachine.6be554fa7c694b8f7dbb.jpg",
     "static/media/arduinologo.png": "/wiszeto.github.io/static/media/arduinologo.51319eb1c9d57bd3dd28.png",
-    "static/media/sgc.png": "/wiszeto.github.io/static/media/sgc.a6ae14212668f75ad940.png",
+    "static/media/boeing.png": "/wiszeto.github.io/static/media/boeing.be9df39697b18f036124.png",
     "static/media/pythonimg.png": "/wiszeto.github.io/static/media/pythonimg.ecfb4e6faf26def45e95.png",
     "static/media/matlablogo.png": "/wiszeto.github.io/static/media/matlablogo.2b608e94f8e1c2c9cd8e.png",
+    "static/media/ultrasonic.png": "/wiszeto.github.io/static/media/ultrasonic.fef3b229e53ce02baee9.png",
     "static/media/csslogo.png": "/wiszeto.github.io/static/media/csslogo.7d039f840c0c251dd48a.png",
     "static/media/raspberrypilogo.png": "/wiszeto.github.io/static/media/raspberrypilogo.bd332561b83bcd50a0f7.png",
     "static/media/oscilloscope.png": "/wiszeto.github.io/static/media/oscilloscope.de623277fc2061fcc6bd.png",
@@ -18,25 +19,26 @@
     "static/media/multimeter_logo.png": "/wiszeto.github.io/static/media/multimeter_logo.a00cdf14be4e215f60ed.png",
     "static/media/html5logo.jpg": "/wiszeto.github.io/static/media/html5logo.0d7034b0984ed2d7ca50.jpg",
     "static/media/seleniumlogo.png": "/wiszeto.github.io/static/media/seleniumlogo.5b027499285764bf2b1c.png",
-    "static/media/boeing.jpg": "/wiszeto.github.io/static/media/boeing.e293465d49f5fdc121f8.jpg",
     "static/media/C_Logo.png": "/wiszeto.github.io/static/media/C_Logo.bbbbbabc8c191bfb99bf.png",
     "static/media/scrumlogo.png": "/wiszeto.github.io/static/media/scrumlogo.4f8794c2051c8116e2d0.png",
     "static/media/singify.png": "/wiszeto.github.io/static/media/singify.ec8cb777224d0f4f4e56.png",
     "static/media/discord.png": "/wiszeto.github.io/static/media/discord.ef8d9c88e020507818c2.png",
+    "static/media/caltrans.jpg": "/wiszeto.github.io/static/media/caltrans.fa17fe60f9327933d99f.jpg",
     "static/media/github.png": "/wiszeto.github.io/static/media/github.05f6c17b8cd04c28456f.png",
     "static/media/awslogo.png": "/wiszeto.github.io/static/media/awslogo.6d32416645b7e59dd14b.png",
     "static/media/linkedin.png": "/wiszeto.github.io/static/media/linkedin.f249b38224ca41a0b909.png",
     "static/media/ltspicelogo.png": "/wiszeto.github.io/static/media/ltspicelogo.fb93e8368fb9f504d783.png",
+    "static/media/ebay.png": "/wiszeto.github.io/static/media/ebay.e15f764dd5c782a87045.png",
     "static/media/reactlogo.svg": "/wiszeto.github.io/static/media/reactlogo.add74742e9e8f8827f7fa666dca760db.svg",
     "static/media/nodelogo.svg": "/wiszeto.github.io/static/media/nodelogo.829c557e87571a03ac6b4713a42d6013.svg",
     "static/media/lualogo.svg": "/wiszeto.github.io/static/media/lualogo.94b96a6c7f17217f9d35bdc8d65908c8.svg",
     "index.html": "/wiszeto.github.io/index.html",
-    "main.93e12cc2.css.map": "/wiszeto.github.io/static/css/main.93e12cc2.css.map",
-    "main.cf9a2c9c.js.map": "/wiszeto.github.io/static/js/main.cf9a2c9c.js.map",
+    "main.0cdabfd7.css.map": "/wiszeto.github.io/static/css/main.0cdabfd7.css.map",
+    "main.5bfa196c.js.map": "/wiszeto.github.io/static/js/main.5bfa196c.js.map",
     "787.fbf24340.chunk.js.map": "/wiszeto.github.io/static/js/787.fbf24340.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.93e12cc2.css",
-    "static/js/main.cf9a2c9c.js"
+    "static/css/main.0cdabfd7.css",
+    "static/js/main.5bfa196c.js"
   ]
 }
