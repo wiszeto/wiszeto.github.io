@@ -1,51 +1,7 @@
-
-html {
-  scroll-behavior: smooth;
-}
-body {
-  background-color: #274C43;
-}
-.app-container {
-  display: flex;
-  flex-wrap: wrap;
-}
-h2 {
-  color: white;
-}
-.side-left {
-  position: fixed;
-  flex: 1;
-  padding-left: 6%;
-  max-width: 43%;
-  height: 100%;
-  overflow: auto;
-
-}
-
-.side-right {
-  padding-top: 4%;
-  flex: 1;
-  max-width: 50%;
-  margin-left: 50%;  /* Adjust according to the width of the left side */
-}
-
-/* If screen size is 800px or less, switch to column layout */
-@media (max-width: 800px) {
-  .app-container {
-    flex-direction: column;
-    height: auto;  /* Allow the height to grow */
-    overflow-y: auto;  /* Enable scrolling on the entire app */
-  }
-
-  .side-left, .side-right {
-    position: static;
-    min-width: 0;
-    max-width: 100%;
-    margin-left: 0;
-    height: auto;  /* Allow the height to grow */
-    overflow: visible;  /* Default overflow behavior */
-  }
-  .side-right {
-    padding-left: 6%;
-  }
+/* Centers the content in the page and adds basic padding */
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
 }

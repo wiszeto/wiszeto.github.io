@@ -1,53 +1,62 @@
-import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
-import '../css/Navbar.css';
+import React from 'react'
 
-const Navbar = () => {
-  const [currentSection, setCurrentSection] = useState('');
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const navbarHeight = 300;
-      const aboutTop = document.querySelector('#about').offsetTop - navbarHeight;
-      const skillsTop = document.querySelector('#skills').offsetTop - navbarHeight;
-      const projectsTop = document.querySelector('#projects').offsetTop - navbarHeight;
-      const experienceTop = document.querySelector('#experience').offsetTop - navbarHeight;
-
-      const currentScrollPos = window.pageYOffset;
-
-      if (currentScrollPos < skillsTop) {
-        setCurrentSection('about');
-      } else if (currentScrollPos < projectsTop) {
-        setCurrentSection('skills');
-      } else if (currentScrollPos < experienceTop) {
-        setCurrentSection('projects');
-      } else {
-        setCurrentSection('experience');
-      }
-    };
-
-
-    window.addEventListener('scroll', handleScroll);
-
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
-
+function Navbar() {
   return (
-    <nav className="nav-links">
-      <div><a href="#about" className={`nav-link ${currentSection === 'about' ? 'active' : ''}`}>About</a></div>
-      <div><a href="#skills" className={`nav-link ${currentSection === 'skills' ? 'active' : ''}`}>Skills</a></div>
-      <div><a href="#projects" className={`nav-link ${currentSection === 'projects' ? 'active' : ''}`}>Projects</a></div>
-      <div><a href="#experience" className={`nav-link ${currentSection === 'experience' ? 'active' : ''}`}>Experience</a></div>
-      {/* <div><Link to="/blog" className="nav-link">Blog</Link></div>  */}
-      <div><a href='https://docs.google.com/document/d/1eMNcO5TS0PoWnj-yf94OxM6ApjHkIM_d40_Kl5dWGzA/edit?usp=sharing' target="_blank" rel="noopener noreferrer">
-        <button className='btn'>
-          Resume <i className="fas fa-external-link-alt"></i>
-        </button>
-      </a></div>
-    </nav>
-  );
-};
+    <nav className="navbar bg-base-100 px-4">
+      {/* Left section (brand + dropdown for small screens) */}
+      <div className="navbar-start">
+        {/* Dropdown (hamburger) - only visible on small screens */}
+        <div className="dropdown">
+          <label tabIndex={0} className="btn btn-ghost lg:hidden">
+            {/* Hamburger icon */}
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-5 w-5"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path 
+                strokeLinecap="round" 
+                strokeLinejoin="round" 
+                strokeWidth="2" 
+                d="M4 6h16M4 12h16M4 18h16" 
+              />
+            </svg>
+          </label>
+          {/* Dropdown menu items */}
+          <ul 
+            tabIndex={0} 
+            className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
+          >
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Projects</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+        {/* Brand or title */}
+        <a className="btn btn-ghost normal-case text-xl" href="#">
+          MyWebsite
+        </a>
+      </div>
 
-export default Navbar;
+      {/* Center section (nav links for larger screens) */}
+      <div className="navbar-center hidden lg:flex">
+        <ul className="menu menu-horizontal px-1">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Projects</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+
+      {/* Right section (extra buttons, profile, etc.) */}
+      <div className="navbar-end">
+        <a className="btn" href="#">Get Started</a>
+      </div>
+    </nav>
+  )
+}
+
+export default Navbar
