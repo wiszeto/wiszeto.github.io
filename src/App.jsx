@@ -1,11 +1,10 @@
 // src/App.jsx
 import React from 'react'
 import { Routes, Route } from 'react-router-dom'
-
-// Import the Navbar
 import Navbar from './components/Navbar'
+import Footer from './components/Footer'
 
-// Import each Page
+// pages
 import Home from './pages/Home'
 import Projects from './pages/Projects'
 import Blog from './pages/Blog'
@@ -14,18 +13,25 @@ import Contact from './pages/Contact'
 
 function App() {
   return (
-    <div className="min-h-screen pt-16">
-      {/* The Navbar stays on every page */}
+    // Make the entire screen a flex column
+    <div className="flex flex-col min-h-screen">
+
+      {/* The Navbar is fixed, so just include it normally */}
       <Navbar />
 
-      {/* Route definitions */}
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/projects" element={<Projects />} />
-        <Route path="/blog" element={<Blog />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/contact" element={<Contact />} />
-      </Routes>
+      {/* Main content that can grow/shrink */}
+      <main className="pt-16 flex-grow p-4">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/projects" element={<Projects />} />
+          <Route path="/blog" element={<Blog />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
+      </main>
+
+
+      <Footer />
     </div>
   )
 }
