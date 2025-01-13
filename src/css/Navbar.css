@@ -1,0 +1,32 @@
+/* navbar.css */
+
+/* Override or supplement DaisyUI classes for the navbar */
+.navbar {
+  position: fixed;      /* fix it on top */
+  top: 0;              /* anchor to the top edge */
+  left: 0;
+  right: 0;
+  z-index: 9999;       /* ensure it's above other elements */
+  padding: 0.5rem 1rem;
+}
+
+/* Add a subtle hover effect for the menu items */
+.navbar .menu.menu-horizontal > li > a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  transition: background-color 0.3s ease;
+}
+
+/* Logo image adjustments (just an example) */
+.navbar img {
+  /* e.g., add a soft drop shadow or border */
+  filter: drop-shadow(0 0 3px rgba(0, 0, 0, 0.15));
+  transition: transform 0.3s ease;
+}
+.navbar img:hover {
+  transform: scale(1.05);
+}
+
+/* If you want to style the border or shadow more specifically */
+.navbar.border-b {
+  border-color: rgba(0, 0, 0, 0.1) !important;
+}

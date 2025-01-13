@@ -1,6 +1,33 @@
-/* Tailwind CSS Directives (required if using Tailwind) */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Custom global styles go here */
+/* Use a pastel gradient instead of a background image */
+body {
+  margin: 0;
+
+  /* Example 1: Radial Gradient (centered "blurry" look) */
+  /* Creates a circular gradient that starts in the top area with pastel blue 
+     and transitions outward to pastel yellow */
+  background: radial-gradient(circle at 30% 20%, 
+    #CABFFA 0%, 
+    #EAD9FF 70%
+  );
+
+  /* Example 2: Linear Gradient (top-to-bottom transition) */
+  /* Uncomment these lines and comment out the radial gradient if you prefer:
+     background: linear-gradient(
+       180deg,      // from top to bottom
+       #C9E9FF 0%,  // pastel blue at the top
+       #FFFEC9 100% // pastel yellow at the bottom
+     );
+  */
+}
+
+/* ARCO font-face rule */
+@font-face {
+  font-family: 'Arco';
+  src: url('../assets/ARCO.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
