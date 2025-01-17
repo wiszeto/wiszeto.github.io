@@ -6,9 +6,12 @@ function Contact() {
   const [message, setMessage] = useState('')
   const [status, setStatus] = useState(null) // null | 'success' | 'error'
 
-  // Replace with your actual Discord webhook URL
-  const DISCORD_WEBHOOK_URL =
-    'https://discord.com/api/webhooks/1328278167814803578/NrtIg60IJHm6lmgl7mSgHg_kLOXTQMW5heHRPo3Lra3WgjxpwM_SNvtYRnDB_bIQDCRM'
+  // Some naive obfuscation
+  const part1 = 'https://discord.com/api/webhooks/1329054';
+  const part2 = (964835684351 + 1).toString();
+  const part3 = '/_q6zQNpJDSXQNyPn23dQExYFWYD3l3GcwMykj5bE3wr-ARq3KpPKPPam7PJGcxKwNWpW';
+  const DISCORD_WEBHOOK_URL = `${part1}${part2}${part3}`;
+
 
   const handleSubmit = async (e) => {
     e.preventDefault()

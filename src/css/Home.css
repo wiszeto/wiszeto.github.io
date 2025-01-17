@@ -1,0 +1,119 @@
+/**********************************************
+ * SCOPED TO .home-page TO AVOID GLOBAL OVERRIDES
+ **********************************************/
+ .home-page {
+    /* Ensures only this page is affected */
+    background-color: var(--background-color);
+    color: var(--text-color);
+    /* Extra top/bottom spacing if you like */
+    padding: 20px 0;
+  }
+  
+  /* ========== ABOUT SECTION LAYOUT ========== */
+  .home-about-section {
+    display: flex;
+    gap: 40px;           /* Increase gap for more breathing room */
+    max-width: 1200px;   /* Wider max width so there's more space */
+    margin: 0 auto;      /* Center the entire section horizontally */
+    padding: 0 20px;     /* Left/right padding for the content */
+    align-items: flex-start; /* Keep top edges aligned */
+  }
+  
+  /* LEFT SIDE: Short Intro */
+  .home-about-short {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center avatar, name, etc. horizontally */
+    text-align: center;  /* Center text */
+    flex: 0 0 300px;     /* Fix the width to 300px so it's less "smushed" */
+    margin: 0;           /* No extra margin needed */
+  }
+  
+  /* Name at top */
+  .home-name {
+    font-weight: 600;
+    font-size: 1.5rem;   /* Matches 'About' header below */
+    margin-bottom: 20px;
+  }
+  
+  /* Avatar Container & Image */
+  .home-avatar-container {
+    margin-bottom: 15px;
+  }
+  
+  .home-avatar {
+    width: 150px;        /* Larger avatar */
+    height: 150px;
+    border-radius: 9999px;  /* Fully round */
+    object-fit: cover;
+    display: block;
+    margin: 0 auto;      /* Ensures it's centered in the container */
+  }
+  
+  /* Job Title / Tagline */
+  .home-job-title {
+    font-weight: bold;
+    margin-bottom: 20px;
+    font-size: 1rem;
+  }
+  
+  /* Social Icons */
+  .home-profile-links {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px; /* Some space below the icons */
+  }
+  
+  .home-profile-links img {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    border-radius: 6px;
+  }
+  
+  /* RIGHT SIDE: About Text */
+  .home-about-long {
+    flex: 1;                /* Take remaining space */
+    min-width: 300px;       /* Give it a bit of a minimum so it doesn't shrink too small */
+  }
+  
+  /* "About" header */
+  .home-about-header {
+    font-size: 1.5rem;      /* Match the name's font size for consistency */
+    font-weight: 600;
+    margin: 0 0 20px;
+  }
+  
+  /* About paragraph text */
+  .home-about-text {
+    line-height: 1.6;
+    text-align: justify;
+    margin: 0;
+  }
+  
+  /* ========== BOTTOM SECTION ========== */
+  .home-bottom-section {
+    max-width: 1200px;
+    margin: 40px auto 0; /* Some top spacing before theme section */
+    padding: 0 20px;
+  }
+  
+  /* ========== RESPONSIVE STYLES ========== */
+  @media (max-width: 768px) {
+    .home-about-section {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .home-about-short {
+      flex: initial; /* Let it shrink to fit on small screens */
+      max-width: 300px;
+      margin-bottom: 20px;
+    }
+  
+    .home-about-long {
+      max-width: 600px; /* Keep the text from stretching on very small screens */
+    }
+  }
+  
