@@ -17,6 +17,7 @@
     margin: 0 auto;      /* Center the entire section horizontally */
     padding: 0 20px;     /* Left/right padding for the content */
     align-items: flex-start; /* Keep top edges aligned */
+    padding-top: 2.3rem;
   }
   
   /* LEFT SIDE: Short Intro */
@@ -98,6 +99,19 @@
     margin: 40px auto 0; /* Some top spacing before theme section */
     padding: 0 20px;
   }
+
+  .project-carousel-section {
+    margin-top: 40px;
+  }
+  
+  /* Make the slides a bit more responsive on smaller screens */
+  @media (max-width: 768px) {
+    .card.w-96 {
+      width: 90%;
+      margin: 0 auto;
+    }
+  }
+  
   
   /* ========== RESPONSIVE STYLES ========== */
   @media (max-width: 768px) {

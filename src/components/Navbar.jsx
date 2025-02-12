@@ -45,7 +45,7 @@ function Navbar() {
           >
             <li><Link to="/">Home</Link></li>
             <li><Link to="/projects">Projects</Link></li>
-            <li><Link to="/blog">Blog</Link></li>
+            {/* <li><Link to="/blog">Blog</Link></li> */}
             <li><Link to="/about">About</Link></li>
             <li><Link to="/contact">Contact</Link></li>
           </ul>
@@ -55,11 +55,12 @@ function Navbar() {
         <ul className="menu menu-horizontal hidden lg:flex px-1">
           <li><Link to="/">Home</Link></li>
           <li><Link to="/projects">Projects</Link></li>
-          <li><Link to="/blog">Blog</Link></li>
+          {/* <li><Link to="/blog">Blog</Link></li> */}
           <li><Link to="/about">About</Link></li>
           <li><Link to="/contact">Contact</Link></li>
         </ul>
       </div>
+      <button type="submit" className="btn">Resume</button>
     </nav>
   )
 }

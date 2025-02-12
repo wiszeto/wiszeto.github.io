@@ -10,6 +10,7 @@ import Projects from './pages/Projects'
 import Blog from './pages/Blog'
 import About from './pages/About'
 import Contact from './pages/Contact'
+import Acc2024 from './pages/Acc2024'
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
           <Route path="/blog" element={<Blog />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/Acc2024" element={<Acc2024 />} />
         </Routes>
       </main>
 

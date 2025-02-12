@@ -78,8 +78,7 @@ function Contact() {
   }
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen p-4">
-      {/* Mockup window centered */}
+    <div className="flex items-center justify-center p-12 box-border">
       <div className="mockup-window bg-base-300 border max-w-md w-full">
         <div className="bg-base-200 px-4 py-8">
           <h2 className="text-2xl font-bold mb-4 text-center">Contact Me</h2>

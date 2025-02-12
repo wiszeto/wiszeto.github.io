@@ -11,6 +11,11 @@ function About() {
       <p>Python, Git, Jira, </p>
       <h1 className="text-3xl font-bold">Academic Skills</h1>
       <p>Matlab, C, Python, </p>
+
+
+
+
+
     </div>
   )
 }

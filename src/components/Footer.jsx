@@ -29,7 +29,7 @@ function Footer() {
       <div className="container mx-auto flex flex-col items-center justify-center">
         <aside className="mb-4">
           <p>Last modified: {lastModified}</p>
-          <p>Created with React.js + DaisyUI. Deployed with GitHub Pages.</p>
+          <p>Built with React.js x DaisyUI. Deployed with GitHub Pages.</p>
           <p>© {new Date().getFullYear()} by Wilson Szeto.</p>
         </aside>
 
