@@ -35,7 +35,7 @@ const Acc2024 = () => {
         <div className="grid md:grid-cols-2 gap-8">
           <div>
             <p>
-              During my research internship, I worked with a team of 5 to 
+              During my research internship, I worked with a team of 5 to
               developed a working self driving robotic car using model predictive control. This page documents our entry into the 2024 American Control
               Conference (ACC) self-driving car competition, which demanded both simulation and
               real-world testing.
@@ -645,6 +645,24 @@ mpc.bounds['upper', '_u', 'delta'] = max_steering_angle`}
           dropped or were inaccurate, SLAM’s local map helped the car detect surrounding features
           (like walls, cones, or track lines) and maintain correct positioning.
         </p>
+        <p>https://www.youtube.com/watch?v=o0-3zftgWnk
+
+          arabic</p>
+        <p>https://www.youtube.com/watch?v=-tONgLDEYWs
+
+          armenia</p>
+        <p>https://www.youtube.com/watch?v=zTrfNIsmELQ
+
+          seoul</p>
+        <p>https://www.youtube.com/watch?v=vJaUwUCT1uM
+
+          india IIT</p>
+        <p>https://www.youtube.com/watch?v=bPNnDlAGEbQ
+
+          bejing</p>
+        <p>https://www.youtube.com/watch?v=WCiZdiXEYGc
+
+          university uncarnate word</p>
       </div>
 
       {/*

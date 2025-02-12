@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 // import ThemeReference from '../components/ThemeReference';
 // import DaisyUIShowcase from '../components/DaisyUIShowcase';
+import { Link } from 'react-router-dom';
 
 // Images
 import myHeadShot from '../media/images.jpg';
@@ -94,9 +95,9 @@ function Home() {
           <h2 className="home-about-header">About</h2>
           <p className="home-about-text">
             Hello! I am Wilson Szeto, a new electrical engineer in the Guidance, Navagation, and Control department at NAWCWD.
-            My current interests include Model Predicitive Control (MPC), Pathplanning, Localization, and other advanced control systems. 
+            My current interests include Model Predicitive Control (MPC), Pathplanning, Localization, and other advanced control systems.
             I primary have a software and simulation background, having built software used by 200k+ users and a developing a few scripts that have made me $10k+.
-            
+
           </p>
         </div>
       </section>
@@ -124,10 +125,15 @@ function Home() {
                 <span className="badge badge-primary">React</span>
                 <span className="badge badge-secondary">Tailwind</span>
                 <span className="badge badge-accent">DaisyUI</span>
-                <a href={slides[currentSlide].link} className="btn btn-primary ml-auto">
+                {/* Use Link instead of <a> */}
+                <Link
+                  to={`/${slides[currentSlide].link}`}
+                  className="btn btn-primary ml-auto"
+                >
                   View More
-                </a>
+                </Link>
               </div>
+
             </div>
           </div>
 
