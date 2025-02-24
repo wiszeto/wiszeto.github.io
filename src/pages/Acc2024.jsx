@@ -15,7 +15,6 @@ import FastestMLTunedVideo from '../media/Fastest_ml_tuned.mp4'
 
 const Acc2024 = () => {
   return (
-    // Use DaisyUI background and text classes that match your theme
     <div className="acc2024-page container mx-auto px-4 py-8 bg-transparent text-base-content">
 
       {/* Page Title */}
@@ -37,18 +36,17 @@ const Acc2024 = () => {
             <p>
               During my research internship, I worked with a team of 5 to
               developed a working self driving robotic car using model predictive control. This page documents our entry into the 2024 American Control
-              Conference (ACC) self-driving car competition, which demanded both simulation and
-              real-world testing.
+              Conference (ACC) self-driving car competition, focusing mainly on the design choices I made for each part of the whole autonomous system.
             </p>
             <p>
               Our approach placed emphasis on <strong>Model Predictive Control (MPC)</strong>, a
-              more advanced technique than traditional <strong>PID controllers</strong>. By
-              predicting future states and optimizing control actions, MPC provided a strategic
+              more advanced technique over the widely used PID &amp; Stanley controllers. By
+              predicting future states and designing custom control actions, MPC provided a strategic
               edge for dealing with vehicle dynamics and constraints.
             </p>
             <p>
               Out of 40 competing universities, only the top 10 advanced to Toronto for the in-person
-              final, and our team—composed entirely of undergraduates—was proud to be among them.
+              final, and our team, which was the only team of all undergrads, was proud to be among them.
               The following sections detail the control system design and methods that enabled us
               to achieve robust and efficient autonomous driving.
             </p>
@@ -83,19 +81,20 @@ const Acc2024 = () => {
             <p>
               Our self-driving system is built around four main modules:
               <strong>Model Predictive Control (MPC)</strong>, <strong>Path Planning</strong>,
-              <strong>Localization</strong>, and <strong>Perception</strong>. Each module can
+              <strong> Localization</strong>, and <strong>Perception</strong>. Each module can
               operate independently, giving us modularity and flexibility when deploying or updating
               features.
             </p>
             <p>
               The <strong>Main Loop</strong> continually receives GPS data to update the vehicle's
-              position. Once a new GPS coordinate is obtained, it goes to the <strong>Path Planning</strong>
+              position. If there is no GPS data, a Extended Kalman Filter will predict GPS coordinates until new GPS data is updated.
+              Once a new GPS coordinate is obtained, it goes to the <strong>Path Planning</strong>
               module, which generates waypoints for the vehicle to follow. These waypoints detail
               positions on the track as well as reference speeds and angles for each segment.
             </p>
             <p>
-              The <strong>MPC</strong> module uses these waypoints—along with sensor information
-              from the <strong>Perception</strong> module (e.g., traffic sign or obstacle data)—to
+              The <strong>MPC</strong> module uses these waypoints, along with sensor information
+              from the <strong>Perception</strong> module (e.g., stop sign or traffic light), to
               optimize steering and throttle commands in real time. Finally, all sensor data
               (including position, heading, IMU readings, and detection events) is logged for
               post-run analysis and improvements.
@@ -125,20 +124,20 @@ const Acc2024 = () => {
           Path Planning and Pure Pursuit
         </h2>
         <p>
-          Path planning determines the vehicle’s route around the track. In this project, we used
+          Path planning determines the vehicle's route around the track. In this project, we used
           a roadmap-based approach, with predefined nodes marking key positions. These nodes are
           strung together to form a continuous sequence of waypoints that the vehicle should follow.
         </p>
 
         {/* Node Sequence and Waypoint Generation */}
-        <h3 className="text-xl font-semibold mt-4 mb-2 text-secondary">
+        <h3 className="text-xl font-semibold mt-4 mb-2 text-accent">
           Node Sequence and Waypoint Generation
         </h3>
         <div className="grid md:grid-cols-2 gap-6">
           <div>
             <p>
               We specify a <em>node sequence</em> that defines the order in which the vehicle passes
-              through the track. For instance, completing one lap might involve a sequence like
+              through the track. For example, this is how a 1 lap sequence would look like:
               <code>[10, 2, 4, 14, 20, 22, 10]</code>. The path planning module then converts these
               nodes into an array of <strong>waypoints</strong>, each including:
             </p>
@@ -150,22 +149,6 @@ const Acc2024 = () => {
               <li><strong>Lane Boundaries:</strong> For ensuring the vehicle stays within a safe corridor.</li>
             </ul>
 
-            <div className="mockup-code my-3">
-              <pre>
-                <code>
-                  {`# Initialize the path planner with the node sequence
-roadmap = SDCSRoadMap(leftHandTraffic=False)
-node_sequence = [10, 2, 4, 14, 20, 22, 10]
-planner = PathPlanning(
-    roadmap=roadmap, 
-    x=0, 
-    y=0, 
-    horizon=50, 
-    node_sequence=node_sequence
-)`}
-                </code>
-              </pre>
-            </div>
           </div>
           <div>
             <img
@@ -177,16 +160,16 @@ planner = PathPlanning(
         </div>
 
         {/* Preprocessing and Data Structure */}
-        <h3 className="text-xl font-semibold mt-8 mb-2 text-secondary">
+        <h3 className="text-xl font-semibold mt-8 mb-2 text-accent">
           Preprocessing and Data Structure
         </h3>
         <div className="grid md:grid-cols-2 gap-6">
           <div>
             <p>
               Each waypoint is <em>precomputed</em> to reduce computation time during real-time
-              control. When the vehicle’s current position (<code>x</code>, <code>y</code>) is
+              control. When the vehicle's current position (<code>x</code>, <code>y</code>) is
               estimated by Localization, the path planner quickly identifies the nearest waypoint
-              and returns a sequence of future waypoints matching the MPC’s horizon length.
+              and returns a sequence of future waypoints matching the MPC's horizon length.
             </p>
             <p>
               For instance:
@@ -194,19 +177,19 @@ planner = PathPlanning(
             <div className="mockup-code my-3">
               <pre>
                 <code>
-                  {`# Get the reference trajectory for the MPC
+{`# Get the reference trajectory for the MPC
 x_estimated, y_estimated = 1.0, -1.0  # Example current position
 ref_trajectory = planner.get_reference_trajectory(
-    x_estimated, 
-    y_estimated, 
-    skip=3
+  x_estimated, 
+  y_estimated, 
+  skip=3
 )`}
                 </code>
               </pre>
             </div>
             <p>
-              This function pinpoints the closest waypoint and returns enough points to cover the
-              MPC’s prediction window.
+              This function pinpoints the closest waypoint based on the given position and returns enough points to cover the
+              MPC's prediction window. Note: the length of the window is set in a config discussed later.
             </p>
           </div>
           <div>
@@ -219,7 +202,7 @@ ref_trajectory = planner.get_reference_trajectory(
         </div>
 
         {/* Integration with MPC */}
-        <h3 className="text-xl font-semibold mt-8 mb-2 text-secondary">
+        <h3 className="text-xl font-semibold mt-8 mb-2 text-accent">
           Integration with MPC
         </h3>
         <div className="grid md:grid-cols-2 gap-6">
@@ -227,12 +210,11 @@ ref_trajectory = planner.get_reference_trajectory(
             <p>
               By providing the MPC with these horizon-based waypoints, the controller can decide
               optimal speed and steering commands. Key metrics like <strong>curvature</strong> and
-              <strong>distance to next curve</strong> help predict where to slow down or accelerate,
-              resulting in smoother, safer driving.
+              <strong> distance to next curve</strong> help predict where to slow down or accelerate,
+              resulting in smoother, safer driving(discussed later).
             </p>
             <p>
-              This quick retrieval of waypoints is crucial for real-time updates, ensuring our
-              approach remains scalable as we add more advanced sensing or environment data.
+              Notice where the yellow and purple lines meet will be the car's current position. The purple is what MPC predicts is the best path.
             </p>
           </div>
           <div>
@@ -243,16 +225,12 @@ ref_trajectory = planner.get_reference_trajectory(
           </div>
         </div>
 
-        {/* Pure Pursuit */}
-        <h3 className="text-xl font-semibold mt-8 mb-2 text-secondary">
-          Pure Pursuit Algorithm
-        </h3>
-        <p>
-          Before implementing MPC, we validated path generation with a simpler
-          <strong>Pure Pursuit</strong> algorithm, which calculates steering angles based on a
-          “lookahead point” on the track. Though less robust than MPC, it was a stepping stone to
-          confirm our waypoint system worked correctly.
-        </p>
+        {/* 
+          <h3 className="text-xl font-semibold mt-8 mb-2 text-secondary">
+            Pure Pursuit Algorithm
+          </h3>
+          ...
+        */}
       </div>
 
       {/*
@@ -265,14 +243,15 @@ ref_trajectory = planner.get_reference_trajectory(
           Model Predictive Control (MPC)
         </h2>
         <p>
-          <strong>Model Predictive Control</strong> is a sophisticated method that anticipates future
-          states of a system and optimizes control inputs over a short horizon. For autonomous
+          <strong>Model Predictive Control</strong> predicts future states based on a given model and reference.
+          It then calculates a optimal control input to best match the reference trajectory over a horizon.
+          For autonomous
           vehicles, this means more precise handling of curves, speed limits, and sudden changes in
           the environment.
         </p>
 
         {/* Bicycle Model */}
-        <h3 className="text-xl font-semibold mt-4 mb-2 text-secondary">
+        <h3 className="text-xl font-semibold mt-4 mb-2 text-accent">
           Bicycle Model
         </h3>
         <div className="grid md:grid-cols-2 gap-6">
@@ -283,18 +262,18 @@ ref_trajectory = planner.get_reference_trajectory(
               include:
             </p>
             <ul className="list-disc ml-4">
-              <li><code>x, y</code> for vehicle’s 2D position</li>
+              <li><code>x, y</code> for the vehicle’s 2D position</li>
               <li><code>ψ</code> for heading (orientation)</li>
               <li><code>v</code> for velocity</li>
               <li><code>δ</code> for steering angle</li>
             </ul>
             <p>
-              Below is a simplified code fragment for defining these variables:
+              Below is a simplified code fragment for defining these variables and how they are used:
             </p>
             <div className="mockup-code my-3">
               <pre>
                 <code>
-                  {`# Define state and input variables
+{`# Define state and input variables
 x = model.set_variable(var_type='_x', var_name='x')
 y = model.set_variable(var_type='_x', var_name='y')
 psi = model.set_variable(var_type='_x', var_name='psi')
@@ -330,36 +309,49 @@ model.setup()`}
           </div>
         </div>
 
-        {/* Objective Function */}
-        <h3 className="text-xl font-semibold mt-8 mb-2 text-secondary">
-          Objective Function
-        </h3>
-        <p>
-          Our MPC formulation balances several factors to minimize tracking error and ensure
-          comfortable driving. Key terms:
-        </p>
-        <ul className="list-disc ml-4">
-          <li><strong>Tracking Error:</strong> Stay close to the reference trajectory.</li>
-          <li><strong>Control Effort:</strong> Avoid rapid, large steering or speed changes.</li>
-          <li><strong>Curvature Penalty:</strong> Slow down on sharp curves for safety.</li>
-          <li><strong>Lane Keeping:</strong> Remain centered within lane boundaries.</li>
-          <li><strong>Damping Factor:</strong> Prevent oscillations in steering commands.</li>
-        </ul>
-        <p>Below is a snippet showing these costs in action:</p>
-        <div className="mockup-code my-3">
-          <pre>
-            <code>
-              {`# Calculate orientation error
+{/* Objective Function */}
+<h3 className="text-xl font-semibold mt-8 mb-2 text-accent">
+  Objective Function
+</h3>
+<p>
+  Our MPC formulation balances several factors to minimize tracking error and ensure
+  comfortable driving. Key terms:
+</p>
+<ul className="list-disc ml-4">
+  <li><strong>Tracking Error:</strong> Stay close to the reference trajectory.</li>
+  <li><strong>Control Effort:</strong> Avoid rapid, large steering or speed changes.</li>
+  <li><strong>Curvature Penalty:</strong> Slow down on sharp curves for safety.</li>
+  <li><strong>Lane Keeping:</strong> Remain centered within lane boundaries.</li>
+  <li><strong>Damping Factor:</strong> Penalize large changes in steering input based on recent steering history.</li>
+  <li><strong>Distance Term:</strong> Adjust speed or behavior based on distance to upcoming obstacles or waypoints.</li>
+</ul>
+<p>Below is a snippet showing these updated costs in action:</p>
+<div className="mockup-code my-3">
+  <pre>
+    <code>
+{`# Calculate orientation error
 psi_diff = fmod((psi - psi_ref) + np.pi, 2*np.pi) - np.pi
 
 # Curvature-based weight
 curvature_weight = curvature_weight_base + curvature_factor * curvature
 
-# Penalize sudden steering changes
-damping_term = damping_factor * ((1 - average_last_deltas) * delta) ** 2
+# New damping term (penalize sudden steering changes)
+if self.previous_deltas:
+    average_last_deltas = sum(self.previous_deltas) / len(self.previous_deltas)
+else:
+    average_last_deltas = 0  # no damping if there's no history
+
+damping_term = damping_factor * (self.model.u['delta'] - average_last_deltas)**2
+
+# New distance term
+distance_term = distance_penalty_factor * (
+    1 + curvature_factor * np.exp(-self.model.tvp['distance'])
+)
 
 # Penalize lateral distance from lane center
-lane_penalty = lane_penalty_factor * ((x - lane_center_x)**2 + (y - lane_center_y)**2)
+lane_penalty = lane_penalty_factor * (
+    (x - lane_center_x)**2 + (y - lane_center_y)**2
+)
 
 # Stage cost
 lterm = (
@@ -368,7 +360,8 @@ lterm = (
     Q_y_base * (y - y_ref)**2 +
     damping_term +
     curvature_term +
-    lane_penalty
+    lane_penalty +
+    distance_term
 )
 
 # Terminal cost
@@ -379,13 +372,15 @@ mterm = (
 
 mpc.set_objective(mterm=mterm, lterm=lterm)
 mpc.set_rterm(v=R_v, delta=R_delta_base)`}
-            </code>
-          </pre>
-        </div>
-        <p>
-          By tuning these parameters, we achieve a balance between performance and safety. Below are
-          demonstration videos illustrating the impact of curvature penalties:
-        </p>
+    </code>
+  </pre>
+</div>
+<p>
+  By tuning these parameters (e.g., <code>damping_factor</code>, <code>distance_penalty_factor</code>),
+  we can achieve a balance between performance, safety, and comfort. Demonstration videos below show
+  how specific penalties—like curvature—impact the vehicle's behavior on sharp turns.
+</p>
+
         <div className="video-section">
           <div className="video-content">
             <video controls className="rounded-lg">
@@ -408,7 +403,7 @@ mpc.set_rterm(v=R_v, delta=R_delta_base)`}
         </div>
 
         {/* Constraints */}
-        <h3 className="text-xl font-semibold mt-8 mb-2 text-secondary">
+        <h3 className="text-xl font-semibold mt-8 mb-2 text-accent">
           Constraints
         </h3>
         <p>
@@ -421,7 +416,7 @@ mpc.set_rterm(v=R_v, delta=R_delta_base)`}
         <div className="mockup-code my-3">
           <pre>
             <code>
-              {`mpc.bounds['lower', '_x', 'x'] = -5
+{`mpc.bounds['lower', '_x', 'x'] = -5
 mpc.bounds['upper', '_x', 'x'] = 5
 mpc.bounds['lower', '_x', 'y'] = -5
 mpc.bounds['upper', '_x', 'y'] = 7
@@ -436,7 +431,7 @@ mpc.bounds['upper', '_u', 'delta'] = max_steering_angle`}
         </div>
 
         {/* Time-Varying Parameters */}
-        <h3 className="text-xl font-semibold mt-8 mb-2 text-secondary">
+        <h3 className="text-xl font-semibold mt-8 mb-2 text-accent">
           Time-Varying Parameters
         </h3>
         <p>
@@ -447,7 +442,7 @@ mpc.bounds['upper', '_u', 'delta'] = max_steering_angle`}
         <div className="mockup-code my-3">
           <pre>
             <code>
-              {`def tvp_fun(t_now):
+{`def tvp_fun(t_now):
     for k in range(horizon):
         tvp_template['_tvp', k, 'x_ref'] = reference_traj[k][0]
         tvp_template['_tvp', k, 'y_ref'] = reference_traj[k][1]
@@ -480,7 +475,7 @@ mpc.bounds['upper', '_u', 'delta'] = max_steering_angle`}
         </p>
 
         {/* Optimization Strategy */}
-        <h3 className="text-xl font-semibold mt-4 mb-2 text-secondary">
+        <h3 className="text-xl font-semibold mt-4 mb-2 text-accent">
           Optimization Strategy
         </h3>
         <p>
@@ -491,7 +486,7 @@ mpc.bounds['upper', '_u', 'delta'] = max_steering_angle`}
         </p>
 
         {/* Configuration File */}
-        <h3 className="text-xl font-semibold mt-4 mb-2 text-secondary">
+        <h3 className="text-xl font-semibold mt-4 mb-2 text-accent">
           Configuration File
         </h3>
         <p>
@@ -501,7 +496,7 @@ mpc.bounds['upper', '_u', 'delta'] = max_steering_angle`}
         <div className="mockup-code my-3">
           <pre>
             <code>
-              {`{
+{`{
   "main_params": {
     "reference_traj_len": 21,
     "QCar_Frequency": 500,
@@ -538,7 +533,7 @@ mpc.bounds['upper', '_u', 'delta'] = max_steering_angle`}
         </p>
 
         {/* Results */}
-        <h3 className="text-xl font-semibold mt-4 mb-2 text-secondary">
+        <h3 className="text-xl font-semibold mt-4 mb-2 text-accent">
           Results
         </h3>
         <p>
@@ -559,62 +554,6 @@ mpc.bounds['upper', '_u', 'delta'] = max_steering_angle`}
 
       {/*
         ==================================
-        Simulation to Testing
-        ==================================
-      */}
-      <div className="card bg-neutral text-neutral-content shadow-xl p-6 mb-8">
-        <h2 className="text-2xl font-bold mb-4 text-primary">
-          Simulation to Testing
-        </h2>
-        <p>
-          While simulations gave us complete control over the environment, transitioning to real-world
-          tests introduced unpredictability (e.g., sensor noise, uneven terrain, and GPS drops).
-          Below is a concise breakdown of our testing steps:
-        </p>
-        <h3 className="text-xl font-semibold mt-4 mb-2 text-secondary">
-          Step 1: Basic I/O Testing
-        </h3>
-        <p>
-          We first verified that each hardware component—motors, LiDAR, lights, brakes—functioned
-          individually. Ensuring basic reliability early prevented more complicated issues during
-          full integration.
-        </p>
-        <h3 className="text-xl font-semibold mt-4 mb-2 text-secondary">
-          Step 2: Straight-Line Testing and Sensor Checks
-        </h3>
-        <p>
-          Next, we let the car drive straight on a clear path while logging sensor outputs (GPS, IMU,
-          etc.). Comparing real data to simulation revealed discrepancies (like significant GPS noise
-          outdoors). Filters were added to smooth these signals.
-        </p>
-        <h3 className="text-xl font-semibold mt-4 mb-2 text-secondary">
-          Step 3: Full System Testing
-        </h3>
-        <p>
-          We then ran the autonomous system end-to-end, discovering major localization errors. The
-          vehicle often misplaced itself on the map, underlining the need for robust state estimation
-          methods.
-        </p>
-        <h3 className="text-xl font-semibold mt-4 mb-2 text-secondary">
-          Continuous Localization Improvements
-        </h3>
-        <p>
-          We trialed various filters (Kalman, particle filtering) and sensor fusion strategies to
-          stabilize position estimates. This iterative approach gradually improved real-world driving
-          reliability.
-        </p>
-        <h3 className="text-xl font-semibold mt-4 mb-2 text-secondary">
-          Final Adjustments
-        </h3>
-        <p>
-          With refined sensor fusion and calibrations, we finally achieved dependable localization,
-          enabling the car to consistently follow the planned path. These tweaks were vital for
-          safe operation on the actual competition track.
-        </p>
-      </div>
-
-      {/*
-        ==================================
         Competition Day
         ==================================
       */}
@@ -629,7 +568,7 @@ mpc.bounds['upper', '_u', 'delta'] = max_steering_angle`}
           approaches provided a steady data pipeline to the MPC, allowing for timely and accurate
           control decisions.
         </p>
-        <h3 className="text-xl font-semibold mt-4 mb-2 text-secondary">
+        <h3 className="text-xl font-semibold mt-4 mb-2 text-accent">
           Extended Kalman Filter
         </h3>
         <p>
@@ -637,7 +576,7 @@ mpc.bounds['upper', '_u', 'delta'] = max_steering_angle`}
           considering both the vehicle's motion model and incoming sensor measurements, the EKF
           yields near-optimal estimates of location and heading.
         </p>
-        <h3 className="text-xl font-semibold mt-4 mb-2 text-secondary">
+        <h3 className="text-xl font-semibold mt-4 mb-2 text-accent">
           2D SLAM
         </h3>
         <p>

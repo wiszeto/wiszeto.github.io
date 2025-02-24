@@ -14,6 +14,8 @@ import Blog from './pages/Blog'
 import About from './pages/About'
 import Contact from './pages/Contact'
 import Acc2024 from './pages/Acc2024'
+import Fpga from './pages/FPGA';
+import Ultrasonic from './pages/Ultrasonic';
 
 function App() {
   return (
@@ -32,6 +34,8 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/Acc2024" element={<Acc2024 />} />
+          <Route path="/fpga" element={<Fpga />} />
+          <Route path="/Ultrasonic" element={<Ultrasonic />} />
         </Routes>
       </main>
 

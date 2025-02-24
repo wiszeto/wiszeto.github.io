@@ -1,6 +1,4 @@
 import React, { useState } from 'react';
-// import ThemeReference from '../components/ThemeReference';
-// import DaisyUIShowcase from '../components/DaisyUIShowcase';
 import { Link } from 'react-router-dom';
 
 // Images
@@ -8,6 +6,7 @@ import myHeadShot from '../media/images.jpg';
 import linkedInLogo from '../media/linkedin.png';
 import gitHubLogo from '../media/github.png';
 import emailLogo from '../media/email.png';
+import qcar from '../media/qcar.jpg';
 
 // CSS
 import '../css/Home.css';
@@ -17,33 +16,33 @@ function Home() {
 
   const slides = [
     {
-      image: myHeadShot,
+      image: qcar,
       alt: 'Self Driving Robotic Car',
       title: 'Self Driving Robotic Car',
       description: 'A short description of Project 1 goes here.',
-      link: "Acc2024"
+      link: 'Acc2024',
     },
     {
       image: linkedInLogo,
       alt: 'Ultrasonic Distance Sensor',
       title: 'Ultrasonic Distance Sensor',
       description: 'A short description of Project 2 goes here.',
-      link: "Acc2024"
+      link: 'Acc2024',
     },
     {
       image: 'https://placeimg.com/400/225/arch',
       alt: 'Project 3',
       title: 'Project 3',
       description: 'A short description of Project 3 goes here.',
-      link: "Acc2024"
+      link: 'Acc2024',
     },
     {
       image: 'https://placeimg.com/400/225/nature',
       alt: 'Project 4',
       title: 'Project 4',
       description: 'A short description of Project 4 goes here.',
-      link: "Acc2024"
-    }
+      link: 'Acc2024',
+    },
   ];
 
   const handleNext = () => {
@@ -94,10 +93,16 @@ function Home() {
         <div className="home-about-long">
           <h2 className="home-about-header">About</h2>
           <p className="home-about-text">
-            Hello! I am Wilson Szeto, a new electrical engineer in the Guidance, Navagation, and Control department at NAWCWD.
-            My current interests include Model Predicitive Control (MPC), Pathplanning, Localization, and other advanced control systems.
-            I primary have a software and simulation background, having built software used by 200k+ users and a developing a few scripts that have made me $10k+.
-
+            Hello! I am Wilson Szeto, a new electrical engineer in the Guidance,
+            Navagation, and Control department at NAWCWD. My current interests
+            include Model Predicitive Control (MPC), Pathplanning, Localization,
+            Cost Functions, Kalman Filters, and other advanced control systems.
+            I primarily have a software and automation background, having both
+            professional and hobbyist programming experience. I've worked up and
+            down the stack, from web dev, to game dev, to embedded C, and FPGAs.
+            I'm always fascinated by what programming can do and I hope to grow
+            my coding arsenal as big as possible. Welcome to my website and
+            check out the amazing projects I've done below!
           </p>
         </div>
       </section>
@@ -125,7 +130,6 @@ function Home() {
                 <span className="badge badge-primary">React</span>
                 <span className="badge badge-secondary">Tailwind</span>
                 <span className="badge badge-accent">DaisyUI</span>
-                {/* Use Link instead of <a> */}
                 <Link
                   to={`/${slides[currentSlide].link}`}
                   className="btn btn-primary ml-auto"
@@ -133,24 +137,73 @@ function Home() {
                   View More
                 </Link>
               </div>
-
             </div>
           </div>
 
           {/* Carousel nav arrows */}
           <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-            <button onClick={handlePrev} className="btn btn-circle">❮</button>
-            <button onClick={handleNext} className="btn btn-circle">❯</button>
+            <button onClick={handlePrev} className="btn btn-circle">
+              ❮
+            </button>
+            <button onClick={handleNext} className="btn btn-circle">
+              ❯
+            </button>
           </div>
         </div>
       </section>
 
       <h2 className="text-2xl font-bold mb-6">Skills</h2>
 
+      {/* ========== DAISYUI WINDOW MOCKUPS ROW ========== */}
+      <div className="flex flex-col md:flex-row gap-4 mb-8">
+        {/* 1. Hobbyist Skills */}
+        <div className="mockup-window border bg-base-300 flex-1">
+          <div className="flex flex-col p-4 bg-base-200 h-full">
+            <h3 className="text-lg font-bold mb-2">Hobbyist Skills</h3>
+            <ul className="list-disc pl-5">
+              <li>Python</li>
+              <li>Lua</li>
+              <li>Git</li>
+              <li>React.js</li>
+              <li>Selenium</li>
+              <li>Postman</li>
+              <li>Cheat Engine</li>
+              <li>Arduino &amp; Raspberry Pi</li>
+            </ul>
+          </div>
+        </div>
+
+        {/* 2. Professional Skills */}
+        <div className="mockup-window border bg-base-300 flex-1">
+          <div className="flex flex-col p-4 bg-base-200 h-full">
+            <h3 className="text-lg font-bold mb-2">Professional Skills</h3>
+            <ul className="list-disc pl-5">
+            <li>Python</li>
+            <li>Git</li>
+            <li>Jira</li>
+            <li>AWS</li>
+              <li>Agile &amp; SCRUM Workflow</li>
+            </ul>
+          </div>
+        </div>
+
+        {/* 3. Academic Skills */}
+        <div className="mockup-window border bg-base-300 flex-1">
+          <div className="flex flex-col p-4 bg-base-200 h-full">
+            <h3 className="text-lg font-bold mb-2">Academic Skills</h3>
+            <ul className="list-disc pl-5">
+            <li>Matlab</li>
+            <li>Embedded C</li>
+            <li>Latex</li>
+
+            </ul>
+          </div>
+        </div>
+      </div>
+
       <h2 className="text-2xl font-bold mb-6">Professional Work Timeline</h2>
       {/* TIMELINE SECTION */}
       <ul className="timeline timeline-snap-icon max-md:timeline-compact timeline-vertical">
-
         {/* New Experience - Left */}
         <li>
           <div className="timeline-middle">
@@ -169,9 +222,7 @@ function Home() {
           </div>
           <div className="timeline-start mb-10 md:text-end">
             <time className="font-mono italic">Feb 2025 - Present</time>
-            <div className="text-lg font-black">
-              NAWCWD (Electrical Engineer)
-            </div>
+            <div className="text-lg font-black">NAWCWD (Electrical Engineer)</div>
             TBD
           </div>
           <hr />
@@ -199,10 +250,12 @@ function Home() {
             <div className="text-lg font-black">
               Office of Student Research (Undergraduate Researcher)
             </div>
-            Worked with a team of 5 to build a self driving robotic car.
-            As the only electrical engineer on the team, I successfully implemented a Model Predictive Control system using custom cost functions,
-            intergrating sensors like 2D LiDAR, GPS, IMU, and cameras for object detection,
-            and extensively optimized 20+ control parameters using bayesian statistics and 10000+ trial simulations.
+            Worked with a team of 5 to build a self driving robotic car. As the only
+            electrical engineer on the team, I successfully implemented a Model
+            Predictive Control system using custom cost functions, integrating sensors
+            like 2D LiDAR, GPS, IMU, and cameras for object detection, and extensively
+            optimized 20+ control parameters using bayesian statistics and 10000+
+            trial simulations.
           </div>
           <hr />
         </li>
@@ -229,7 +282,8 @@ function Home() {
             <div className="text-lg font-black">
               Caltrans (Engineering Student Assistant)
             </div>
-            Developed python scripts to interface with Bosch AI traffic cameras using cv2, REST APIs, and ONVIF protocols, enabling automated camera
+            Developed python scripts to interface with Bosch AI traffic cameras
+            using cv2, REST APIs, and ONVIF protocols, enabling automated camera
             control and data collection.
           </div>
           <hr />
@@ -257,8 +311,9 @@ function Home() {
             <div className="text-lg font-black">
               The Boeing Company (Software Test Engineer)
             </div>
-            Created detailed test cases and identified bugs to tracked in Jira, along with using TestComplete for automated testing,
-            improving test coverage and reducing manual efforts.
+            Created detailed test cases and identified bugs to track in Jira,
+            along with using TestComplete for automated testing, improving test
+            coverage and reducing manual efforts.
           </div>
           <hr />
         </li>
@@ -285,12 +340,11 @@ function Home() {
             <div className="text-lg font-black">
               California Cybersecurity Institute (Software Developer)
             </div>
-            Streamlined support for over 100 tickets, using AWS DynamoDB for fast data storage.
-            Followed Agile workflows with Trello and Git.
+            Streamlined support for over 100 tickets, using AWS DynamoDB for fast
+            data storage. Followed Agile workflows with Trello and Git.
           </div>
         </li>
       </ul>
-
     </div>
   );
 }
