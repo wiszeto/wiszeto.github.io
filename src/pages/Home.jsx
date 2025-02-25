@@ -7,6 +7,8 @@ import linkedInLogo from '../media/linkedin.png';
 import gitHubLogo from '../media/github.png';
 import emailLogo from '../media/email.png';
 import qcar from '../media/qcar.jpg';
+import CH2 from '../media/CH2.jpeg';
+import rblx from '../media/rblx_background.png';
 
 // CSS
 import '../css/Home.css';
@@ -19,29 +21,29 @@ function Home() {
       image: qcar,
       alt: 'Self Driving Robotic Car',
       title: 'Self Driving Robotic Car',
-      description: 'A short description of Project 1 goes here.',
+      description: 'This project shows how I put model predictive control in a robotic car and design choices I made.',
       link: 'Acc2024',
     },
+    // {
+    //   image: linkedInLogo,
+    //   alt: 'Ultrasonic Distance Sensor',
+    //   title: 'Ultrasonic Distance Sensor',
+    //   description: 'A short description of Project 2 goes here.',
+    //   link: 'Ultrasonic',
+    // },
     {
-      image: linkedInLogo,
-      alt: 'Ultrasonic Distance Sensor',
-      title: 'Ultrasonic Distance Sensor',
-      description: 'A short description of Project 2 goes here.',
-      link: 'Acc2024',
+      image: CH2,
+      alt: 'Course Hero Bot',
+      title: 'Course Hero Bot',
+      description: 'A study resource bot used by over 200k+ students around the world.',
+      link: 'CHbot',
     },
     {
-      image: 'https://placeimg.com/400/225/arch',
-      alt: 'Project 3',
-      title: 'Project 3',
-      description: 'A short description of Project 3 goes here.',
-      link: 'Acc2024',
-    },
-    {
-      image: 'https://placeimg.com/400/225/nature',
-      alt: 'Project 4',
-      title: 'Project 4',
-      description: 'A short description of Project 4 goes here.',
-      link: 'Acc2024',
+      image: rblx,
+      alt: 'Roblox Projects',
+      title: 'Roblox Projects',
+      description: 'These are a collection of roblox scripts that I have made.',
+      link: 'Roblox',
     },
   ];
 
@@ -94,15 +96,15 @@ function Home() {
           <h2 className="home-about-header">About</h2>
           <p className="home-about-text">
             Hello! I am Wilson Szeto, a new electrical engineer in the Guidance,
-            Navagation, and Control department at NAWCWD. My current interests
-            include Model Predicitive Control (MPC), Pathplanning, Localization,
-            Cost Functions, Kalman Filters, and other advanced control systems.
-            I primarily have a software and automation background, having both
-            professional and hobbyist programming experience. I've worked up and
-            down the stack, from web dev, to game dev, to embedded C, and FPGAs.
-            I'm always fascinated by what programming can do and I hope to grow
-            my coding arsenal as big as possible. Welcome to my website and
-            check out the amazing projects I've done below!
+            Navagation, and Control department at NAWCWD. I have a software and automation background,
+            having both professional and hobbyist programming expirence.
+            I have worked up and down the stack, from web dev(this website), to game dev, to automation scripts, to embedded C and assembely.
+            Programming is a hobby to me, and I am always willing to grow my my coding arsenal.
+            My current focus is to build my C/C++ skillset, along with Matlab and control systems because it is not as strong as I want it to be and I know I can build
+            awesome things with it. Feel free to look around my website, where I showcase my favorite projects!
+            
+            
+
           </p>
         </div>
       </section>

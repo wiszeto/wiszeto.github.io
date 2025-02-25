@@ -16,6 +16,7 @@ function Footer() {
     <footer className="w-full bg-primary text-primary-content p-10 text-center mt-auto border-t border-primary-focus">
       <div className="container mx-auto flex flex-col items-center justify-center">
         <aside className="mb-4">
+          <p>⚠️Site Building In Progress⚠️</p>
           <p>Last modified: {lastModified}</p>
           <p>Built with React.js x DaisyUI. Deployed with GitHub Pages.</p>
           <p>© {new Date().getFullYear()} by Wilson Szeto.</p>

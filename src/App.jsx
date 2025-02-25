@@ -16,6 +16,8 @@ import Contact from './pages/Contact'
 import Acc2024 from './pages/Acc2024'
 import Fpga from './pages/FPGA';
 import Ultrasonic from './pages/Ultrasonic';
+import Roblox from './pages/Roblox';
+import CHbot from './pages/CHbot';
 
 function App() {
   return (
@@ -36,6 +38,8 @@ function App() {
           <Route path="/Acc2024" element={<Acc2024 />} />
           <Route path="/fpga" element={<Fpga />} />
           <Route path="/Ultrasonic" element={<Ultrasonic />} />
+          <Route path="/Roblox" element={<Roblox />} />
+          <Route path="/CHbot" element={<CHbot />} />
         </Routes>
       </main>
 

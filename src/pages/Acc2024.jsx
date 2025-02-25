@@ -12,6 +12,7 @@ import BikeModelImage from '../media/bike_model.png'
 import CurveSlowDownVideo from '../media/curve_slow_down.mp4'
 import CurveOvershootVideo from '../media/curve_overshoot.mp4'
 import FastestMLTunedVideo from '../media/Fastest_ml_tuned.mp4'
+import optuna from '../media/optuna2.png'
 
 const Acc2024 = () => {
   return (
@@ -416,16 +417,16 @@ mpc.set_rterm(v=R_v, delta=R_delta_base)`}
         <div className="mockup-code my-3">
           <pre>
             <code>
-{`mpc.bounds['lower', '_x', 'x'] = -5
-mpc.bounds['upper', '_x', 'x'] = 5
-mpc.bounds['lower', '_x', 'y'] = -5
-mpc.bounds['upper', '_x', 'y'] = 7
-mpc.bounds['lower', '_x', 'psi'] = -3 * np.pi
-mpc.bounds['upper', '_x', 'psi'] = 3 * np.pi
-mpc.bounds['lower', '_u', 'v'] = min_velocity
-mpc.bounds['upper', '_u', 'v'] = max_velocity
-mpc.bounds['lower', '_u', 'delta'] = -max_steering_angle
-mpc.bounds['upper', '_u', 'delta'] = max_steering_angle`}
+  {`mpc.bounds['lower', '_x', 'x'] = -5
+  mpc.bounds['upper', '_x', 'x'] = 5
+  mpc.bounds['lower', '_x', 'y'] = -5
+  mpc.bounds['upper', '_x', 'y'] = 7
+  mpc.bounds['lower', '_x', 'psi'] = -3 * np.pi
+  mpc.bounds['upper', '_x', 'psi'] = 3 * np.pi
+  mpc.bounds['lower', '_u', 'v'] = min_velocity
+  mpc.bounds['upper', '_u', 'v'] = max_velocity
+  mpc.bounds['lower', '_u', 'delta'] = -max_steering_angle
+  mpc.bounds['upper', '_u', 'delta'] = max_steering_angle`}
             </code>
           </pre>
         </div>
@@ -468,30 +469,20 @@ mpc.bounds['upper', '_u', 'delta'] = max_steering_angle`}
           Hyperparameter Tuning
         </h2>
         <p>
-          Fine-tuning our MPC’s many parameters can be tedious by hand. We used
-          <strong>Optuna</strong>, an automated hyperparameter optimization framework, to streamline
-          this process. This helped us avoid human bias and systematically explore different
-          parameter combinations.
+          Fine-tuning our MPC's parameters by trial and error is very tedious. We used Optuna,
+          an automatic hyperparameter optimization framework using bayes theorem, to run many 
+          different combination of parameters. We then picked the parameters with the best time
+          and most accurate pathing, and used it for the next evolution to further analyze and
+          make sure we didn't hit a local minima.
         </p>
 
-        {/* Optimization Strategy */}
-        <h3 className="text-xl font-semibold mt-4 mb-2 text-accent">
-          Optimization Strategy
-        </h3>
-        <p>
-          We tackled optimization in stages, starting with crucial parameters like
-          <code>Q_x_base</code>, <code>Q_y_base</code>, and <code>Q_psi_base</code>, and then
-          expanding to others. By limiting the search space and focusing on subsets of parameters,
-          we avoided many local minima.
-        </p>
 
         {/* Configuration File */}
         <h3 className="text-xl font-semibold mt-4 mb-2 text-accent">
           Configuration File
         </h3>
         <p>
-          A <code>config.json</code> file consolidated our default settings. Below is an example of
-          how these parameters were organized:
+          The <code>config.json</code> file stores the parameters/gains that are adjustable. 
         </p>
         <div className="mockup-code my-3">
           <pre>
@@ -532,6 +523,16 @@ mpc.bounds['upper', '_u', 'delta'] = max_steering_angle`}
           trials.
         </p>
 
+        <h3 className="text-xl font-semibold mt-4 mb-2 text-accent">
+          Trials
+        </h3>
+
+        <img
+              src={optuna}
+              alt="Overarching Design Diagram"
+              className="rounded-lg"
+            />
+
         {/* Results */}
         <h3 className="text-xl font-semibold mt-4 mb-2 text-accent">
           Results
@@ -562,28 +563,9 @@ mpc.bounds['upper', '_u', 'delta'] = max_steering_angle`}
           Competition Day
         </h2>
         <p>
-          For the in-person competition, we combined <strong>Extended Kalman Filter (EKF)</strong>
-          sensor fusion with <strong>2D SLAM</strong>. The EKF filtered out high-frequency noise from
-          the GPS and IMU, while SLAM built and updated a local map in real-time. Together, these
-          approaches provided a steady data pipeline to the MPC, allowing for timely and accurate
-          control decisions.
+Below is a list showing other team's that made it and their simulations to compare to mine.
         </p>
-        <h3 className="text-xl font-semibold mt-4 mb-2 text-accent">
-          Extended Kalman Filter
-        </h3>
-        <p>
-          The EKF is well-suited for scenarios where sensor noise can lead to erratic positions. By
-          considering both the vehicle's motion model and incoming sensor measurements, the EKF
-          yields near-optimal estimates of location and heading.
-        </p>
-        <h3 className="text-xl font-semibold mt-4 mb-2 text-accent">
-          2D SLAM
-        </h3>
-        <p>
-          Simultaneous Localization and Mapping was an extra layer of resilience. Even if GPS signals
-          dropped or were inaccurate, SLAM’s local map helped the car detect surrounding features
-          (like walls, cones, or track lines) and maintain correct positioning.
-        </p>
+
         <p>https://www.youtube.com/watch?v=o0-3zftgWnk
 
           arabic</p>
@@ -615,8 +597,8 @@ mpc.bounds['upper', '_u', 'delta'] = max_steering_angle`}
         </h2>
         <p>
           Throughout this journey, I gained hands-on expertise in applying control theory, robotics,
-          and sensor fusion to a tangible problem. Achieving a top-ten finish among primarily
-          graduate-level teams was a testament to our robust design, persistent testing, and
+          and sensor fusion. Achieving a top-ten finish among primarily
+          graduate-level teams was my favorite part, showing robust design and
           effective use of advanced control methods like MPC. This foundation sets the stage for
           future enhancements and underscores the real-world impact of methodical, well-structured
           autonomous driving research.

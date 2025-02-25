@@ -44,9 +44,9 @@ function Navbar() {
             className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-primary rounded-box w-52"
           >
             <li><Link to="/">Home</Link></li>
-            <li><Link to="/projects">Projects</Link></li>
+            {/* <li><Link to="/projects">Projects</Link></li> */}
             {/* <li><Link to="/blog">Blog</Link></li> */}
-            <li><Link to="/about">About</Link></li>
+            {/* <li><Link to="/about">About</Link></li> */}
             <li><Link to="/contact">Contact</Link></li>
           </ul>
         </div>
@@ -54,9 +54,9 @@ function Navbar() {
         {/* Horizontal menu (visible on large screens) */}
         <ul className="menu menu-horizontal hidden lg:flex px-1">
           <li><Link to="/">Home</Link></li>
-          <li><Link to="/projects">Projects</Link></li>
+          {/* <li><Link to="/projects">Projects</Link></li> */}
           {/* <li><Link to="/blog">Blog</Link></li> */}
-          <li><Link to="/about">About</Link></li>
+          {/* <li><Link to="/about">About</Link></li> */}
           <li><Link to="/contact">Contact</Link></li>
         </ul>
       </div>
