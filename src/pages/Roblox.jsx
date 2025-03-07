@@ -63,7 +63,7 @@ function Roblox() {
                         <p>
                             The concept of this game is there is a safezone and a pvp zone.
                             When you are in the pvp zone, you gain 1 time per second.
-                            You have a sword and if another play kills you, they get your time.
+                            You have a sword and if another player kills you, they get your time and vice versa.
                         </p>
                         <br />
                         <p>
