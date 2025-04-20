@@ -9,6 +9,7 @@ import emailLogo from '../media/email.png';
 import qcar from '../media/qcar.jpg';
 import CH2 from '../media/CH2.jpeg';
 import rblx from '../media/rblx_background.png';
+import pfp from '../media/pfp.jpg';
 
 // CSS
 import '../css/Home.css';
@@ -32,18 +33,18 @@ function Home() {
     //   link: 'Ultrasonic',
     // },
     {
-      image: CH2,
-      alt: 'Course Hero Bot',
-      title: 'Course Hero Bot',
-      description: 'A study resource bot used by over 200k+ students around the world.',
-      link: 'CHbot',
-    },
-    {
       image: rblx,
       alt: 'Roblox Projects',
       title: 'Roblox Projects',
       description: 'These are a collection of roblox scripts that I have made.',
       link: 'Roblox',
+    },
+    {
+      image: CH2,
+      alt: 'Course Hero Bot',
+      title: 'Course Hero Bot',
+      description: 'A study resource bot used by over 200k+ students around the world.',
+      link: 'CHbot',
     },
   ];
 
@@ -96,14 +97,14 @@ function Home() {
           <h2 className="home-about-header">About</h2>
           <p className="home-about-text">
             Hello! I am Wilson Szeto, a new electrical engineer in the Guidance,
-            Navagation, and Control department at NAWCWD. I have a software and automation background,
-            having both professional and hobbyist programming expirence.
-            I have worked up and down the stack, from web dev(this website), to game dev, to automation scripts, to embedded C and assembely.
-            Programming is a hobby to me, and I am always willing to grow my my coding arsenal.
-            My current focus is to build my C/C++ skillset, along with Matlab and control systems because it is not as strong as I want it to be and I know I can build
-            awesome things with it. Feel free to look around my website, where I showcase my favorite projects!
-            
-            
+            Navagation, and Control branch at NAWCWD. I have a scripting and automation background,
+            both on the job and as a hobbyist. Professionally, I have touch a wide range of subjects,
+            including cloud computing, REST APIs, and software testing.
+            As a hobbyist, I love game dev and creating powerful automation scripts for everyday tasks.
+            My current focus is to build my controls skillset, along with learning Matlab and dynamics because I am facinated by the potential in autonomy and robotics.
+            Feel free to look around my website, where I showcase my favorite projects!
+
+
 
           </p>
         </div>
@@ -180,10 +181,11 @@ function Home() {
           <div className="flex flex-col p-4 bg-base-200 h-full">
             <h3 className="text-lg font-bold mb-2">Professional Skills</h3>
             <ul className="list-disc pl-5">
-            <li>Python</li>
-            <li>Git</li>
-            <li>Jira</li>
-            <li>AWS</li>
+              <li>Matlab & Simulink</li>
+              <li>Python</li>
+              <li>Git</li>
+              <li>Jira</li>
+              <li>AWS</li>
               <li>Agile &amp; SCRUM Workflow</li>
             </ul>
           </div>
@@ -194,9 +196,9 @@ function Home() {
           <div className="flex flex-col p-4 bg-base-200 h-full">
             <h3 className="text-lg font-bold mb-2">Academic Skills</h3>
             <ul className="list-disc pl-5">
-            <li>Matlab</li>
-            <li>Embedded C</li>
-            <li>Latex</li>
+              <li>Matlab</li>
+              <li>Embedded C</li>
+              <li>Latex</li>
 
             </ul>
           </div>
@@ -253,8 +255,8 @@ function Home() {
               Office of Student Research (Undergraduate Researcher)
             </div>
             Worked with a team of 5 to build a self driving robotic car. As the only
-            electrical engineer on the team, I successfully implemented a Model
-            Predictive Control system using custom cost functions, integrating sensors
+            electrical engineer on the team, I successfully implemented Model
+            Predictive Control using custom cost functions, integrating sensors
             like 2D LiDAR, GPS, IMU, and cameras for object detection, and extensively
             optimized 20+ control parameters using bayesian statistics and 10000+
             trial simulations.
@@ -284,8 +286,8 @@ function Home() {
             <div className="text-lg font-black">
               Caltrans (Engineering Student Assistant)
             </div>
-            Developed python scripts to interface with Bosch AI traffic cameras
-            using cv2, REST APIs, and ONVIF protocols, enabling automated camera
+            As a engineering student assistant, I developed several python scripts to interface with Bosch AI traffic cameras
+            using cv2, REST APIs, and ONVIF protocols for automated camera
             control and data collection.
           </div>
           <hr />
@@ -313,9 +315,9 @@ function Home() {
             <div className="text-lg font-black">
               The Boeing Company (Software Test Engineer)
             </div>
-            Created detailed test cases and identified bugs to track in Jira,
-            along with using TestComplete for automated testing, improving test
-            coverage and reducing manual efforts.
+            I was responsible for seeking out software bugs and creating good chaos, while documenting everything in Jira.
+            These bugs would eventually turn into automated test cases for regression testing, which boosted our test coverage and reduced manual testing efforts.
+
           </div>
           <hr />
         </li>
@@ -342,8 +344,8 @@ function Home() {
             <div className="text-lg font-black">
               California Cybersecurity Institute (Software Developer)
             </div>
-            Streamlined support for over 100 tickets, using AWS DynamoDB for fast
-            data storage. Followed Agile workflows with Trello and Git.
+            Future proofed a legacy internal organization system using python scripts and AWS services.
+            Streamlined support for hundreds of tickets and verification of thousands of user.
           </div>
         </li>
       </ul>
